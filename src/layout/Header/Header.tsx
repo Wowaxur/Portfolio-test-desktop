@@ -14,8 +14,7 @@ export const Header = () => {
     };
 
 const StyledHeader = styled.header`
-  background: var(--bg-1,
-  linear-gradient(101.56deg, rgba(44, 44, 44, 1) 0%, rgba(28, 28, 28, 1) 100%));
+  background: linear-gradient(131deg, #414141 0%, #2D2D2D 100.52%);
   display: flex;
   flex-wrap: nowrap;
   justify-content: center;
