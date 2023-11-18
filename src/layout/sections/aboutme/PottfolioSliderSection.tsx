@@ -14,9 +14,9 @@ export const PortfolioSection = () => {
                 <PortfolioText>
                     <TitlePortfolioText>Landing Ice-cream</TitlePortfolioText>
                     <SimpleTextPortfolio>Lorem ipsum dolor sit amet, conjecture adipiscing elit. Donec ut orci eu elit consequat posuere ut sed elit. Nulla et tristique felis. Morbi quis orci non purus blandit fringilla. Etiam et mollis eros. Duis venenatis vulputate lacus, non tristique eros placerat vel. Nam nec magna lacus. Etiam euismod egestas mauris nec mollis. Phasellus efficitur et ex vel condimentum. Cras enim purus, tempor sed massa vel, accumsan bibendum magna. Nullam hendrerit cursus purus, sit amet viverra arcu gravida vel.</SimpleTextPortfolio>
-                    <a href={'#'}> <MoreText>More</MoreText>
-                    <Icon IconId={'secVector'} width={'36'} height={'36'} viewBox={'0 0 36 36'}/>
-                    </a>
+                    <MoreText href={'#'}> More
+                    <Icon IconId={'secVector'} width={'36'} height={'36'} viewBox={'0 0 25 36'}/>
+                    </MoreText>
                     </PortfolioText>
             </PortfolioBlock>
         </PortfolioSlider>
@@ -32,9 +32,7 @@ const PortfolioSlider = styled.section`
   align-items: center;
  margin-top: 186px;
   margin-bottom: 21px;
-  a {
-    text-decoration: none;
-  }
+  
   @media (max-width: 768px) {  
     display: flex;
     flex-direction: column;
@@ -44,7 +42,7 @@ const PortfolioSlider = styled.section`
     margin-top: 55px;
 
   }
-
+ 
 `
 const PortfolioTitle = styled.span`
   
@@ -108,6 +106,13 @@ const PortfolioText =styled.div`
   margin: 82px 50px 0 63%;
   bottom: 80%;
   padding-bottom: 10px;
+    a {
+      text-decoration: none;
+      span:hover{
+        transform: scale(2);
+      }
+    }
+  
   svg{
     stroke-width: 1px;
     stroke: #E2A100;
@@ -124,7 +129,9 @@ const PortfolioText =styled.div`
     flex-direction: column;
     text-align: center;
     justify-items: center;
-    
+  }
+  a:hover {
+    transform: scale(1.2); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
   }
 `
  const TitlePortfolioText = styled.span`
@@ -160,11 +167,14 @@ const SimpleTextPortfolio = styled.div`
 
   }
 `
-const MoreText = styled.span`
+const MoreText = styled.a`
   color: #E2A100;
   font-family: 'Arodora Pro', sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: 300;
   line-height: normal;
+  :hover{
+    transform: scale(2);
+  }
 `
