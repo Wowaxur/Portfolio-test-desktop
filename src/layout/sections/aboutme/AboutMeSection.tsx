@@ -48,7 +48,16 @@ const AboutGroup = styled.section`
     display: flex;
     flex-wrap: wrap;
     text-align: center;
+  };
+  img{
+    border-radius: 5%;
   }
+  img:hover {
+    transform: scale(1.05);
+    transition: .3s;
+    
+  }
+    
 `
 const LeftImages = styled.div`
   display: flex;
