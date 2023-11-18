@@ -35,10 +35,11 @@ const PhotoWrapp = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-
+  
 `
 
 const MyPhoto = styled.img`
+  position: relative;
   min-width: 524px;
   min-height: 544px;
   border-radius: 100%;
@@ -47,12 +48,14 @@ const MyPhoto = styled.img`
   background: lightgray 50% / cover no-repeat url(${MyImg});
   object-fit: cover;
   transform: rotate(-9.81deg);
+  
   @media (max-width: 767px) {
     min-height: 344px;
     min-width: 324px;;
   }
 `
 const TextTitle = styled.div`
+  margin: 25px;
   gap: 10px;
   display: flex;
   flex-direction: column;
@@ -104,6 +107,7 @@ const ContactMe = styled.button`
   line-height: normal;
   background: var(--orange, linear-gradient(87deg, #E2A300 4.47%, #E29500 95.53%));
   box-shadow: 0 2px 13px 0 rgba(226, 158, 0, 0.48);
-  @media (max-width: 767px) {
+  :hover {
+    transform: scale(1.1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
   }
 `
