@@ -4,11 +4,14 @@ import {StyledLokiNose} from "../../../components/lokiComponents/styledLokiNose"
 import {StyledLokiFace} from "../../../components/lokiComponents/styledLokiFace";
 import {StyledLokiBody} from "../../../components/lokiComponents/styledLokiBody";
 import {Elipses} from "../ellipses/Elipses";
+interface AboutMeSectionProps {
+    id?: string; // Указываем, что 'id' - это строка
+}
 
 export const AboutMeSection = () => {
     return (
 
-        <AboutGroup>
+        <AboutGroup id='AboutMeSection'>
             <LeftImages>
                 <StyledLokiFace/>
             <StyledLokiBody/>
@@ -37,7 +40,7 @@ export const AboutMeSection = () => {
 };
 
 
-const AboutGroup = styled.section`
+const AboutGroup = styled.section<AboutMeSectionProps>`
   display: flex;
   margin-top: 10%;
   align-items: flex-start;
