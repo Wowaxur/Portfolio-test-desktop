@@ -14,6 +14,7 @@ export const Rectangle = styled.a<StyledRectanglePropsType>`
   border-color: transparent;
   border-style: solid;
   box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.47);
+  transition: 1.2s;
   :hover {
     transform: scale(1.2); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
   }
