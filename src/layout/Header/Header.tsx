@@ -19,13 +19,21 @@ const StyledHeader = styled.header`
   flex-wrap: nowrap;
   justify-content: center;
   text-align: center;
+  padding-left:30px;
   a{
     text-decoration: none;
     color: var(--text, #e4e4e4);
     font: 300 18px "Arodora Pro", sans-serif;
   }
-  @media (max-width: 767px) { 
-  flex-wrap: wrap;
+  /*svg{
+    margin-left: 15px;
+  }*/
+  ul {
     justify-content: center;
-    align-items: center;}
+    position: relative;
+  }
+  @media (max-width: 767px) {
+    padding-left:0;
+    padding-right: 30px;
+    flex-wrap: wrap;
 `
