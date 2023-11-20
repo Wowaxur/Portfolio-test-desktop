@@ -2,9 +2,13 @@ import React from 'react';
 import styled from "styled-components";
 import Universe from '../../../assets/images/imageUni.webp'
 import {Icon} from "../../../components/icon/icon";
+interface PortfolioSectionProps {
+    id?: string; // Указываем, что 'id' - это строка
+}
+
 export const PortfolioSection = () => {
     return (
-        <PortfolioSlider>
+        <PortfolioSlider id='Portfolio'>
             <PortfolioTitle>PORTFOLIO</PortfolioTitle>
 
             <PortfolioBlock>
@@ -23,7 +27,7 @@ export const PortfolioSection = () => {
     );
 };
 
-const PortfolioSlider = styled.section`
+const PortfolioSlider = styled.section<PortfolioSectionProps>`
   display: flex;
   z-index: 1;
   flex-direction: column;

@@ -2,16 +2,21 @@ import React from 'react';
 import styled from "styled-components";
 import MyImg from '../../../assets/images/IMG_2305.webp'
 import {FlexContainer} from "../../../components/FlexContainer";
+import {Link} from "react-scroll";
+
+interface MainSectionProps {
+    id?: string; // Указываем, что 'id' - это строка
+}
 
 export const MainSection = () => {
     return (
-        <StyledMain>
+        <StyledMain id="mainSection">
             <FlexContainer align={'center'} justify={'space-between'}>
                 <TextTitle>
                     <Title>Hello</Title>
                     <NameTitle>I’m Vlad Vakula</NameTitle>
                     <SmallTitle>A Web Developer</SmallTitle>
-                    <ContactMe>CONTACT ME</ContactMe>
+                    <ContactMe><Link to="Contact" smooth={true} duration={500}>CONTACT ME</Link></ContactMe>
                 </TextTitle>
                 <PhotoWrapp>
                     <MyPhoto/>
@@ -20,7 +25,7 @@ export const MainSection = () => {
         </StyledMain>
     );
 };
-const StyledMain = styled.section`
+const StyledMain = styled.section<MainSectionProps>`
   display: flex;
   justify-content: center;
   padding-bottom: 198px;

@@ -1,22 +1,17 @@
 import React from 'react';
 import styled from "styled-components";
+import {Link} from "react-scroll";
 
 export const Menu = () => {
     return (
         <StyledMenu>
             <ul>
                 <li>
-                    <a href="">Home</a>
+                    <Link to="mainSection" smooth={true} duration={500}>Home</Link>
                 </li>
-                <li>
-                    <a href="">About me</a>
-                </li>
-                <li>
-                    <a href="">Portfolio</a>
-                </li>
-                <li>
-                    <a href="">Contact</a>
-                </li>
+                <li><Link to="AboutMeSection" smooth={true} duration={500}>About me</Link></li>
+                <li><Link to="Portfolio" smooth={true} duration={500}>Portfolio</Link></li>
+                <li><Link to="Contact" smooth={true} duration={500}>Contact</Link></li>
             </ul>
 
         </StyledMenu>
@@ -24,10 +19,11 @@ export const Menu = () => {
 };
 const StyledMenu = styled.nav`
   width: 100%;
-  margin-right: 200px;
+  
 
   ul {
-    align-self: flex-end;
+    
+    align-self: center;
     justify-content: space-between;
     List-style-type: none;
     display: flex;
@@ -39,13 +35,14 @@ const StyledMenu = styled.nav`
     line-height: normal;
     @media (max-width: 767px) {
     justify-content: center;
-      margin-left: 50%;
       gap: 15px;
     }
   }
 
   li {
     margin-right: 10px;
+    transition: .5s;
+
   }
   li:hover {
     transform: scale(1.2); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
