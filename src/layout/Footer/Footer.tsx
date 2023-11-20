@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import React from "react";
 import {NicknamePluslogo} from "../../components/logo/nicknamePluslogo";
-import {Link} from 'react-scroll';
 import {Menu} from "../../components/menu/Menu";
 interface FooterSectionProps {
     id?: string; // Указываем, что 'id' - это строка
