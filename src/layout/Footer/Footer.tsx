@@ -1,17 +1,20 @@
 import styled from "styled-components";
 import React from "react";
 import {NicknamePluslogo} from "../../components/logo/nicknamePluslogo";
+import {Link} from 'react-scroll';
+import {Menu} from "../../components/menu/Menu";
+interface FooterSectionProps {
+    id?: string; // Указываем, что 'id' - это строка
+}
+
 
 export const Footer = () => {
     return (
-        <StyledFooter>
+        <StyledFooter id='Contact'>
             <MobileFootWrapper>
                 <FirstColumn>
                     <FooterTitleBlock>
-                        <li><a href={'#'}>Home</a></li>
-                        <li><a href={'#'}>About me</a></li>
-                        <li><a href={'#'}>Portfolio</a></li>
-                        <li><a href={'#'}>Contact</a></li>
+                       <Menu/>
                     </FooterTitleBlock>
                 </FirstColumn>
                 <FooterTitleBlock>
@@ -21,37 +24,36 @@ export const Footer = () => {
                     <li><a id={'number'} href={'#'}>Calls: +7 (999) - 123 - 45 -67</a></li>
                 </FooterTitleBlock>
             </MobileFootWrapper>
-                <NicKLogoBlock>
-                    <MobileFootWrapper>
-                        <NicknamePluslogo/>
-                        <EclipseVector href={'#'}>
-                            <svg width="60" height="60" viewBox="0 0 60 60" fill="none"
-                                 xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="30" cy="30" r="30" transform="rotate(90 30 30)"
-                                        fill="url(#paint0_linear_93_26)"/>
-                                <path d="M40.5 28.5L30 18L19.5 28.5" stroke="#E4E4E4" stroke-width="2"
-                                      stroke-linecap="round"
-                                      stroke-linejoin="round"/>
-                                <path d="M30 18L30 42" stroke="#E4E4E4" stroke-width="2" stroke-linecap="round"
-                                      stroke-linejoin="round"/>
-                                <defs>
-                                    <linearGradient id="paint0_linear_93_26" x1="-1.90735e-06" y1="-1.90735e-06"
-                                                    x2="57.0661"
-                                                    y2="-2.6715" gradientUnits="userSpaceOnUse">
-                                        <stop stop-color="#E2A300"/>
-                                        <stop offset="1" stop-color="#E29500"/>
-                                    </linearGradient>
-                                </defs>
-                            </svg>
+            <NicKLogoBlock>
+                <MobileFootWrapper>
+                    <NicknamePluslogo/>
+                    <EclipseVector href={'#'}>
+                        <svg width="60" height="60" viewBox="0 0 60 60" fill="none"
+                             xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="30" cy="30" r="30" fill="url(#paint0_linear_93_26)"/>
+                            <path d="M40.5 28.5L30 18L19.5 28.5" stroke="#E4E4E4" strokeWidth="2"
+                                  strokeLinecap="round"
+                                  strokeLinejoin="round"/>
+                            <path d="M30 18L30 42" stroke="#E4E4E4" strokeWidth="2" strokeLinecap="round"
+                                  strokeLinejoin="round"/>
+                            <defs>
+                                <linearGradient id="paint0_linear_93_26" x1="-1.90735e-06" y1="-1.90735e-06"
+                                                x2="57.0661"
+                                                y2="-2.6715" gradientUnits="userSpaceOnUse">
+                                    <stop stopColor="#E2A300"/>
+                                    <stop offset="1" stopColor="#E29500"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
 
-                        </EclipseVector>
-                    </MobileFootWrapper>
-                    <Copyright>Copyright © 2023</Copyright>
-                </NicKLogoBlock>
+                    </EclipseVector>
+                </MobileFootWrapper>
+                <Copyright>Copyright © 2023</Copyright>
+            </NicKLogoBlock>
         </StyledFooter>
     );
 };
-const StyledFooter = styled.footer`
+const StyledFooter = styled.footer<FooterSectionProps>`
   box-sizing: border-box;
   display: flex;
   flex-direction: row;
@@ -61,6 +63,7 @@ const StyledFooter = styled.footer`
   background: var(--Gray2, linear-gradient(131deg, #414141 0%, #2D2D2D 100.52%));
   @media (max-width: 768px) {
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
     text-align: center;
     gap: 5px;
@@ -68,7 +71,6 @@ const StyledFooter = styled.footer`
   }
 `
 const MobileFootWrapper = styled.div`
-  
   @media (max-width: 768px) {
     display: flex;
     flex-wrap: wrap;
@@ -78,12 +80,16 @@ const MobileFootWrapper = styled.div`
   }
 `
 const FirstColumn = styled.div`
-  display: inline-block;
+  display: inline;
   position: relative;
   justify-content: center;
-
   @media (max-width: 768px) {
     display: none;
+  }
+
+  li {
+    transition: .5s;
+
   }
 
   li:hover {
@@ -92,7 +98,7 @@ const FirstColumn = styled.div`
 
 `
 const FooterTitleBlock = styled.ul`
-  display: inline-block;
+  display: inline-flex;
   List-style-type: none;
   flex-direction: column;
   font-family: 'Arodora Pro', sans-serif;
@@ -100,6 +106,9 @@ const FooterTitleBlock = styled.ul`
   font-style: normal;
   font-weight: 300;
   line-height: normal;
+  ul {
+    flex-direction: column;
+  }
   @media (max-width: 768px) {
     font-size: 14px;
     margin-left: -40px;
@@ -118,19 +127,16 @@ const FooterTitleBlock = styled.ul`
 
 `
 const NicKLogoBlock = styled.div`
-  margin-top: 4%;
+  margin-top: 40px;
   @media (max-width: 768px) {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    margin: 10px auto;
+    margin: 0 auto 10px auto;
     align-items: center;
-    width: 100%;
-    
   }
 `
 const Copyright = styled.small`
-
   color: var(--text, #E4E4E4);
   font-family: 'Arodora Pro', sans-serif;
   font-size: 18px;
@@ -139,11 +145,11 @@ const Copyright = styled.small`
 `
 const EclipseVector = styled.a`
   svg {
-    transform: translate(10%, 25%);
+    transition: .5s;
     @media (max-width: 768px) {
       margin-bottom: 25px;
-      
     }
+
     :hover {
       transform: scale(1.2);
     }
