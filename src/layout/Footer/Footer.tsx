@@ -2,6 +2,9 @@ import styled from "styled-components";
 import React from "react";
 import {NicknamePluslogo} from "../../components/logo/nicknamePluslogo";
 import {Menu} from "../../components/menu/Menu";
+import {Link} from "react-scroll";
+
+
 interface FooterSectionProps {
     id?: string; // Указываем, что 'id' - это строка
 }
@@ -26,7 +29,8 @@ export const Footer = () => {
             <NicKLogoBlock>
                 <MobileFootWrapper>
                     <NicknamePluslogo/>
-                    <EclipseVector href={'#'}>
+                    <EclipseVector>
+                        <Link to="mainSection" smooth={true} duration={500}>
                         <svg width="60" height="60" viewBox="0 0 60 60" fill="none"
                              xmlns="http://www.w3.org/2000/svg">
                             <circle cx="30" cy="30" r="30" fill="url(#paint0_linear_93_26)"/>
@@ -44,7 +48,7 @@ export const Footer = () => {
                                 </linearGradient>
                             </defs>
                         </svg>
-
+                        </Link>
                     </EclipseVector>
                 </MobileFootWrapper>
                 <Copyright>Copyright © 2023</Copyright>

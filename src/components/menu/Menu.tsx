@@ -42,11 +42,11 @@ const StyledMenu = styled.nav`
   li {
     margin-right: 10px;
     transition: .5s;
-
+    :hover {
+      transform: scale(1.2); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+    }
   }
-  li:hover {
-    transform: scale(1.2); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
-  }
+  
   @media (max-width: 767px) {
     flex-wrap: wrap;
     align-self: flex-end;

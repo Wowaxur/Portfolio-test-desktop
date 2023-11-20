@@ -25,15 +25,14 @@ const StyledHeader = styled.header`
     color: var(--text, #e4e4e4);
     font: 300 18px "Arodora Pro", sans-serif;
   }
-  /*svg{
-    margin-left: 15px;
-  }*/
   ul {
-    justify-content: center;
+    justify-content: space-around;
     position: relative;
   }
   @media (max-width: 767px) {
     padding-left:0;
     padding-right: 30px;
     flex-wrap: wrap;
+    justify-content: center;
+
 `

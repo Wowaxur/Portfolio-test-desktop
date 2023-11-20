@@ -20,6 +20,7 @@ const ElipsesBlock = styled.section`
   flex-wrap: wrap;
   flex-direction: row;
   z-index: 0;
+  margin-top: 150px;
   @media (max-width: 767px) {
     flex-direction: column;
     gap: 300px;

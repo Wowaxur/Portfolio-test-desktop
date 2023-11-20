@@ -28,7 +28,6 @@ export const MainSection = () => {
 const StyledMain = styled.section<MainSectionProps>`
   display: flex;
   justify-content: center;
-  padding-bottom: 198px;
   @media (max-width: 767px) {
     display: flex;
     flex-direction: column;
@@ -53,7 +52,7 @@ const MyPhoto = styled.img`
   background: lightgray 50% / cover no-repeat url(${MyImg});
   object-fit: cover;
   transform: rotate(-9.81deg);
-  
+  margin-top: 20px;
   @media (max-width: 767px) {
     min-height: 344px;
     min-width: 324px;;
@@ -112,6 +111,7 @@ const ContactMe = styled.button`
   line-height: normal;
   background: var(--orange, linear-gradient(87deg, #E2A300 4.47%, #E29500 95.53%));
   box-shadow: 0 2px 13px 0 rgba(226, 158, 0, 0.48);
+  transition: .7s;
   :hover {
     transform: scale(1.1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
   }
