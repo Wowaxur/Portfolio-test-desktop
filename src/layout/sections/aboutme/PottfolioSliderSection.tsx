@@ -18,7 +18,7 @@ export const PortfolioSection = () => {
                 <PortfolioText>
                     <TitlePortfolioText>Landing Ice-cream</TitlePortfolioText>
                     <SimpleTextPortfolio>Lorem ipsum dolor sit amet, conjecture adipiscing elit. Donec ut orci eu elit consequat posuere ut sed elit. Nulla et tristique felis. Morbi quis orci non purus blandit fringilla. Etiam et mollis eros. Duis venenatis vulputate lacus, non tristique eros placerat vel. Nam nec magna lacus. Etiam euismod egestas mauris nec mollis. Phasellus efficitur et ex vel condimentum. Cras enim purus, tempor sed massa vel, accumsan bibendum magna. Nullam hendrerit cursus purus, sit amet viverra arcu gravida vel.</SimpleTextPortfolio>
-                    <MoreText href={'#'}> More
+                    <MoreText><a href={'#'}> More</a>
                     <Icon IconId={'secVector'} width={'36'} height={'36'} viewBox={'0 0 25 36'}/>
                     </MoreText>
                     </PortfolioText>
@@ -80,17 +80,16 @@ const RectanglePortfolio = styled.div`
   background: #c4c4c4;
   border-radius: 29px;
   max-width: 493px;
+  height: auto;
   top: 50px;
   left: 50px;
   max-height: 500px;
   position: relative;
-  display: flex;
 
   @media (max-width: 768px) {
     top: 0;
     left: 0;
-      max-width: 90%;
-    height: auto;
+    max-width: 90%;
     margin: 35px;
   }
 `
@@ -101,22 +100,15 @@ const PortfolioImg = styled.img`
   border-radius: 29px;
   background:url(${Universe}) lightgray 0.283px 0px / 100% 100% no-repeat ;
   @media (max-width: 768px) {
+  max-height: 300px;
 
-    max-width: 100%;
-    max-height: 100%;  }
+  }
 `
 const PortfolioText =styled.div`
   position: relative;
   margin: 82px 50px 0 63%;
   bottom: 80%;
   padding-bottom: 10px;
-    a {
-      text-decoration: none;
-      span:hover{
-        transform: scale(2);
-      }
-    }
-  
   svg{
     stroke-width: 1px;
     stroke: #E2A100;
@@ -133,9 +125,6 @@ const PortfolioText =styled.div`
     flex-direction: column;
     text-align: center;
     justify-items: center;
-  }
-  a:hover {
-    transform: scale(1.2); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
   }
 `
  const TitlePortfolioText = styled.span`
@@ -171,14 +160,20 @@ const SimpleTextPortfolio = styled.div`
 
   }
 `
-const MoreText = styled.a`
+const MoreText = styled.div`
   color: #E2A100;
   font-family: 'Arodora Pro', sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: 300;
   line-height: normal;
-  :hover{
-    transform: scale(2);
+  transition: .5s;
+  a{
+    text-decoration: none;
+    color: #E2A100;
   }
+  :hover{
+    transform: scale(1.5);
+  }
+  
 `
