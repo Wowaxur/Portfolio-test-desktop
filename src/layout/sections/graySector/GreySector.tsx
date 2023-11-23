@@ -19,7 +19,7 @@ export const GreySector = () => {
 const StyledGreySector = styled.section`
   position: relative;
   flex-direction: column;
-  margin-top: 198px;
+  border-radius: 35px;
   background: var(--Gray2, linear-gradient(130deg, #414141 0%, #2D2D2D 100%));
   display: flex;
   @media (max-width: 767px) {
