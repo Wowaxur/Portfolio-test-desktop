@@ -43,12 +43,13 @@ const SkillSection = styled.section`
   display: flex;
   position: relative;
   margin-top: -10%;
-  @media (max-width: 768px) {
+  @media (max-width: 770px) {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
+    margin-bottom: 20%;
     margin-top: -30%;
-
+   padding: 0 10%;
   }
 
 `
@@ -57,11 +58,16 @@ const SkillText = styled.span`
   font: 300 24px "Arodora Pro", sans-serif;
   position: relative;
   top: 30px;
+  @media (max-width: 768px) {
+    top: 0;
+    font: 300 10px "Arodora Pro", sans-serif;
+
+
+  }
 `
 const SkillBox = styled.div`
   display: flex;
   @media (max-width: 768px) {
-    margin-bottom: 32px;
     justify-content: center;
   }
 `
