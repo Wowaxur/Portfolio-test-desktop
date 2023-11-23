@@ -3,7 +3,6 @@ import styled from "styled-components";
 import {StyledLokiNose} from "../../../components/lokiComponents/styledLokiNose";
 import {StyledLokiFace} from "../../../components/lokiComponents/styledLokiFace";
 import {StyledLokiBody} from "../../../components/lokiComponents/styledLokiBody";
-import {Elipses} from "../ellipses/Elipses";
 interface AboutMeSectionProps {
     id?: string; // Указываем, что 'id' - это строка
 }
@@ -14,7 +13,7 @@ export const AboutMeSection = () => {
         <AboutGroup id='AboutMeSection'>
             <LeftImages>
                 <StyledLokiFace/>
-            <StyledLokiBody/>
+                <StyledLokiBody/>
             </LeftImages>
             <AboutWrapper>
             <AboutCenterBlock>
@@ -52,20 +51,17 @@ const AboutGroup = styled.section<AboutMeSectionProps>`
     flex-wrap: wrap;
     text-align: center;
   };
-  img{
+  img {
     border-radius: 5%;
   }
-  img:hover {
-    transform: scale(1.05);
-    transition: .3s;
-    
-  }
-    
+
 `
 const LeftImages = styled.div`
   display: flex;
   flex-direction: column;
-  
+  @media (max-width: 767px) {
+    margin-right: 40%;
+  }
 `
 const RightImg = styled.div`
   flex-wrap: nowrap;
@@ -73,11 +69,14 @@ const RightImg = styled.div`
 const AboutWrapper = styled.div`
   width: 496px;
   height: 822px;
+  @media (max-width: 768px) {
+    height: auto;
+  }
 `
 const AboutCenterBlock = styled.div`
   background: #2c2c2c;
   z-index: 1;
-  border-radius: 14px;
+  border-radius: 15px;
   width: 100%;
   height: 100%;
   display: flex;
@@ -87,9 +86,8 @@ const AboutCenterBlock = styled.div`
   @media (max-width: 768px) {
     display: flex;
     flex-direction: column;
-    max-width: 90%;
+    max-width: 100%;
     height: auto;
-    margin: 0 15px;
   }
 `
 const AboutTitle = styled.h3`
@@ -98,6 +96,10 @@ const AboutTitle = styled.h3`
   display: flex;
   font: 400 48px "NEXT ART", sans-serif;
   margin-bottom: 36px;
+  @media (max-width: 768px) {
+    font: 400 28px "NEXT ART", sans-serif;
+
+  }
 `
 const AboutText = styled.div`
   color: #ffffff;
@@ -105,14 +107,13 @@ const AboutText = styled.div`
   font: 300 20px "Arodora Pro", sans-serif;
   width: 370px;
   @media (max-width: 768px) {
-    font: 300 20px "Arodora Pro", sans-serif;
-    @media (max-width: 768px) {
-      width: auto;
-      margin: 15px;
-      text-align: left;
-      
-          }
-    
+    font: 300 16px "Arodora Pro", sans-serif;
+    width: auto;
+    margin: 15px;
+    text-align: left;
+
+  }
+
 
 
 
