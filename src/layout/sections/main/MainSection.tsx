@@ -28,6 +28,7 @@ export const MainSection = () => {
 const StyledMain = styled.section<MainSectionProps>`
   display: flex;
   justify-content: center;
+  padding-bottom: 200px;
   @media (max-width: 767px) {
     display: flex;
     flex-direction: column;
@@ -39,23 +40,22 @@ const PhotoWrapp = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  
 `
 
 const MyPhoto = styled.img`
   position: relative;
-  min-width: 524px;
-  min-height: 544px;
+  width: 524px;
+  height: 544px;
   border-radius: 100%;
-  border: 31px solid var(--blu, #00C4F0);
+  border: 25px solid var(--blu, #00C4F0);
   box-shadow: 0 0 152px 0 rgba(0, 196, 240, 0.42);
   background: lightgray 50% / cover no-repeat url(${MyImg});
   object-fit: cover;
   transform: rotate(-9.81deg);
   margin-top: 20px;
   @media (max-width: 767px) {
-    min-height: 344px;
-    min-width: 324px;;
+    height: 344px;
+    width: 324px;;
   }
 `
 const TextTitle = styled.div`
@@ -77,6 +77,9 @@ export const Title = styled.span`
   font-weight: 600;
   line-height: normal;
   margin-bottom: -12%;
+  @media (max-width: 768px) {
+    font-size: 32px;
+  }
 `
 const NameTitle = styled.h2`
   color: var(--text, #E4E4E4);
@@ -85,6 +88,9 @@ const NameTitle = styled.h2`
   font-style: normal;
   font-weight: 700;
   line-height: normal;
+  @media (max-width: 768px) {
+    font-size: 52px;
+  }
 `
 export const SmallTitle = styled.h1`
   color: #ABB3BA;
