@@ -13,9 +13,13 @@ const LokiFace = styled.img`
   width: 270px;
   height: 281px;
   position: relative;
-  box-shadow: 0px 0px 0px 6px rgba(104, 104, 104, 1);
-  background: url(${LokiOne})  lightgray 50% / cover no-repeat;;
-  
+  border-radius: 5%;
+  box-shadow: 0 0 0 6px rgba(104, 104, 104, 1);
+  background: url(${LokiOne})  lightgray 50% / cover no-repeat;
+  transition: .3s;
+  :hover {
+    transform: scale(1.18);}
+
 `
 const StyledRectangle = styled.div`
   background: #2c2c2c;

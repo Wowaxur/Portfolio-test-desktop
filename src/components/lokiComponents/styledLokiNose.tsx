@@ -13,9 +13,11 @@ const LokiNose = styled.img`
   height: 427px;
   margin: 29px;
   flex-shrink: 0;
-  box-shadow: 0px 0px 0px 6px #686868;
+  box-shadow: 0 0 0 6px #686868;
   background: url(${LokiTwo}) lightgray 50% / cover no-repeat;
-
+  transition: .3s;
+  :hover {
+    transform: scale(1.17);}
 `
 const StyledRectangle = styled.div`
   z-index: 0;
