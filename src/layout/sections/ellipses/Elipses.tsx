@@ -21,10 +21,10 @@ const ElipsesBlock = styled.section`
   flex-direction: row;
   z-index: 0;
   margin-top: 150px;
+  margin-left: 15%;
   @media (max-width: 767px) {
-    flex-direction: column;
-    gap: 300px;
-    flex-wrap: nowrap;
+    display: flex;
+    flex-wrap: wrap;
     
   }
 `
@@ -34,20 +34,18 @@ const RightElipses = styled.div`
   flex-direction: column;
   align-items: flex-end;
   right: -10%;
-  @media (max-width: 767px) {
-    margin-right: 30%;
-    gap: 300px;
-    
+ 
 `;
 const WhiteElipse = styled.div`
+  
   border-radius: 50%;
   border-style: solid;
   border-color: var(--text, #e4e4e4);
   border-width: 89px;
   width: 640px;
   height: 640px;
-  box-shadow: 0px 4px 70px 0px rgba(255, 255, 255, 0.25);
-
+  box-shadow: 0 4px 70px 0 rgba(255, 255, 255, 0.25);
+  position: relative;
 
 `
 const BlueElipse = styled.div`
@@ -59,7 +57,7 @@ const BlueElipse = styled.div`
   height: 486px;
   box-shadow: 0px 4px 70px 0px rgba(0, 193, 236, 0.25);
   @media (max-width: 768px) {
-    margin-top: 45%;
+    margin-right: 0%;
   }
 `
 const OrangeBlock = styled.div`
@@ -70,5 +68,7 @@ const OrangeBlock = styled.div`
   width: 356px;
   height: 356px;
   box-shadow: 0px 4px 70px 0px rgba(226, 162, 0, 0.25);
-
+  @media (max-width: 768px) {
+    margin-right: 50%;
+  }
 `
