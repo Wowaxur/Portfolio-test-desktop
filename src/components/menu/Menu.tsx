@@ -19,12 +19,9 @@ export const Menu = () => {
 };
 const StyledMenu = styled.nav`
   width: 100%;
-  
-
   ul {
-    
     align-self: center;
-    justify-content: space-between;
+    justify-content: space-around;
     List-style-type: none;
     display: flex;
     color: var(--text, #E4E4E4);
@@ -43,7 +40,7 @@ const StyledMenu = styled.nav`
     margin-right: 10px;
     transition: .5s;
     :hover {
-      transform: scale(1.2); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+      transform: scale(1.2); 
     }
   }
   
@@ -54,6 +51,5 @@ const StyledMenu = styled.nav`
     justify-content: center;
     max-width: 767px;
     width: 100%;
-
   }
 `
