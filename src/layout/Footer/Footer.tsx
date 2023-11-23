@@ -146,7 +146,8 @@ const Copyright = styled.small`
   font-style: normal;
   line-height: normal;
 `
-const EclipseVector = styled.a`
+const EclipseVector = styled.span`
+  
   svg {
     transition: .5s;
     @media (max-width: 768px) {
