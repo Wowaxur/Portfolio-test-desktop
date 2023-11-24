@@ -12,7 +12,7 @@ export const GreySector = () => {
             <MySkillSection/>
             <AboutMeSection/>
             <PortfolioSection/>
-            <Carousel/>
+
         </StyledGreySector>
     );
 };
