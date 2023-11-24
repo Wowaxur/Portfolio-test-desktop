@@ -4,6 +4,7 @@ import styled from "styled-components";
 import {MySkillSection} from "../skillsection/MySkillSection";
 import {Elipses} from "../ellipses/Elipses";
 import {PortfolioSection} from "../aboutme/PottfolioSliderSection";
+import {Carousel} from "../carousel/Carousel";
 export const GreySector = () => {
     return (
         <StyledGreySector>
@@ -11,7 +12,7 @@ export const GreySector = () => {
             <MySkillSection/>
             <AboutMeSection/>
             <PortfolioSection/>
-
+            <Carousel/>
         </StyledGreySector>
     );
 };
