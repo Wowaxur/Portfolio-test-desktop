@@ -59,6 +59,7 @@ const AboutGroup = styled.section<AboutMeSectionProps>`
 const LeftImages = styled.div`
   display: flex;
   flex-direction: column;
+  
   @media (max-width: 767px) {
     margin-right: 40%;
   }
@@ -69,12 +70,14 @@ const RightImg = styled.div`
 const AboutWrapper = styled.div`
   width: 496px;
   height: 822px;
+  
   @media (max-width: 768px) {
     height: auto;
   }
 `
 const AboutCenterBlock = styled.div`
   background: #2c2c2c;
+  
   z-index: 1;
   border-radius: 15px;
   width: 100%;
