@@ -30,7 +30,7 @@ const StyledMain = styled.section<MainSectionProps>`
   justify-content: center;
   padding-bottom: 200px;
   @media (max-width: 767px) {
-    display: flex;
+    display: flow;
     flex-direction: column;
     justify-content: center;
   }
