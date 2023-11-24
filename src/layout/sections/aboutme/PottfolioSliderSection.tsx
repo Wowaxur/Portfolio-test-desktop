@@ -34,7 +34,7 @@ const PortfolioSlider = styled.section<PortfolioSectionProps>`
   text-align: center;
   justify-items: center;
   align-items: center;
- margin-top: 186px;
+ margin-top: 100px;
   margin-bottom: 21px;
   
   @media (max-width: 768px) {  
@@ -63,7 +63,7 @@ const PortfolioBlock = styled.div`
   border-radius: 29px;
   margin-top: 30px;
   background: var(--Gray2, linear-gradient(131deg, #414141 0%, #2D2D2D 100.52%));
-  box-shadow: 0 4px 15px 0 rgba(27, 27, 27, 0.28);
+  box-shadow: 0 4px 15px 0 rgba(27, 27, 27, 1);
   width: 970px;
   height: 600px;
   flex-shrink: 0;
