@@ -5,7 +5,6 @@ import {Icon} from "../../../components/icon/icon";
 interface PortfolioSectionProps {
     id?: string; // Указываем, что 'id' - это строка
 }
-
 export const PortfolioSection = () => {
     return (
         <PortfolioSlider id='Portfolio'>
@@ -22,6 +21,7 @@ export const PortfolioSection = () => {
                     <Icon IconId={'secVector'} width={'36'} height={'36'} viewBox={'0 0 25 36'}/>
                     </MoreText>
                     </PortfolioText>
+
             </PortfolioBlock>
         </PortfolioSlider>
     );
