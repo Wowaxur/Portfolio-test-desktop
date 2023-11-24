@@ -41,7 +41,7 @@ export const AboutMeSection = () => {
 
 const AboutGroup = styled.section<AboutMeSectionProps>`
   display: flex;
-  margin-top: 10%;
+  margin: 10% 10px 0 10px;
   align-items: flex-start;
   position: relative;
   justify-content: center;
@@ -77,7 +77,6 @@ const AboutWrapper = styled.div`
 `
 const AboutCenterBlock = styled.div`
   background: #2c2c2c;
-  
   z-index: 1;
   border-radius: 15px;
   width: 100%;
@@ -109,6 +108,7 @@ const AboutText = styled.div`
   text-align: left;
   font: 300 20px "Arodora Pro", sans-serif;
   width: 370px;
+  padding: 10px;
   @media (max-width: 768px) {
     font: 300 16px "Arodora Pro", sans-serif;
     width: auto;
