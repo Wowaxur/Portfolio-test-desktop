@@ -7,15 +7,19 @@ import {CardProject} from "../../cardProj/CardProject";
 
 export const Carousel = () => {
     let settings = {
+        centerMode: true,
         dots: true,
         infinite: true,
         speed: 500,
         slidesToShow: 3,
         slidesToScroll: 1,
+        swipeToSlide: true,
         responsive: [
             {
                 breakpoint: 768,
                 settings: {
+                    centerMode: false,
+                    adaptiveHeight: true,
                     slidesToShow: 1,
                     slidesToScroll: 1,
                     infinite: true,
@@ -24,6 +28,7 @@ export const Carousel = () => {
             }
         ]
     };
+
 
     return (
         <SliderSlick>
@@ -41,10 +46,29 @@ export const Carousel = () => {
 };
 
 const SliderSlick = styled.div`
+  width: 60%;
+  align-self: center;
   justify-content: center;
-  margin: 15px 150px;
-  @media (max-width: 768px) {
-    margin: 0 auto;
-    width: 85%;
+  margin: 40px auto;
+  .slick-slide {
+    transition: 0.7s ease;
+    &.slick-center {
+      .CardBox {
+        background: linear-gradient(45deg, rgb(246, 146, 89), rgb(241, 105, 117));
+        p {
+          color: aliceblue;
+        }
+      }
+
+    }
   }
-`
+}
+
+.dots-style li[class="slick-active"] button {
+  background: #eac8be;
+}
+@media (max-width: 768px) {
+  margin: 0 auto 40px auto;
+  width: 85%;
+  .slick-slide {
+  `
