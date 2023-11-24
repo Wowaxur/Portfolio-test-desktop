@@ -54,7 +54,7 @@ const BrandLillteText = styled.p`
   line-height: 185.182%; /* 29.629px */
   letter-spacing: 0.32px;
   @media (max-width: 767px) {
-  margin: 5px 5px;
+    margin: 5px 5px;
   }
 `
 const BrandLogoBlock = styled.div`
@@ -88,5 +88,5 @@ const BrandLogoBlock = styled.div`
     grid-row-gap: 20px;
 
 
-  } 
+  }
 `
