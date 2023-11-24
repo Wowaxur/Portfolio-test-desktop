@@ -5,7 +5,7 @@ import React from "react";
 export const CardProject = () => {
     return (
 <Container>
-    <CardBox>
+    <CardBox className={'CardBox'}>
         <CardImage/>
         <Title>Welcome </Title>
         <Paragraph>Faucibus. Faucibus. Sit sit sapien sit tempusrisu ut. Sit molestie ornare in venen.
