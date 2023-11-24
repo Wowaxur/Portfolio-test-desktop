@@ -33,6 +33,8 @@ const StyledRectangle = styled.div`
   height: 378px;
   position: relative;
   align-items: center;
+  box-shadow: 0 4px 15px 0 rgba(27, 27, 27, 1);
+
   @media (max-width: 768px) {
     justify-content: left;
     width: 185px;
