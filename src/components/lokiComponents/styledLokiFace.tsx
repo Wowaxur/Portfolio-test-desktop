@@ -27,7 +27,8 @@ const StyledRectangle = styled.div`
   position: relative;
   height: 339px;
   margin-bottom: 50%;
-  
+  box-shadow: 0 4px 15px 0 rgba(27, 27, 27, 1);
+
   @media (max-width: 768px) {
     display: none;
   }
