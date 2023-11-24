@@ -42,7 +42,7 @@ const SkillSection = styled.section`
   flex-wrap: wrap;
   display: flex;
   position: relative;
-  margin-top: -10%;
+  margin-top: -100px;
   @media (max-width: 770px) {
     display: flex;
     flex-direction: row;
