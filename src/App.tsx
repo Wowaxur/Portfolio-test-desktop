@@ -6,12 +6,14 @@ import {GreySector} from "./layout/sections/graySector/GreySector";
 import {Generalsection} from "./layout/sections/generalSection/GeneralSection";
 import {Header} from "./layout/Header/Header";
 import {BrandsWorksSector} from "./layout/sections/brandsWorkSection/BrandsWork";
+import {Carousel} from "./layout/sections/carousel/Carousel";
 function App() {
     return (
         <Generalsection>
             <Header/>
             <MainSection/>
             <GreySector/>
+            <Carousel/>
             <BrandsWorksSector/>
             <Footer/>
         </Generalsection>
