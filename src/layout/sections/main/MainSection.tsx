@@ -50,7 +50,6 @@ const MyPhoto = styled.img`
   border: 25px solid var(--blu, #00C4F0);
   box-shadow: 0 0 152px 0 rgba(0, 196, 240, 0.42);
   background: lightgray 50% / cover no-repeat url(${MyImg});
-  object-fit: cover;
   transform: rotate(-9.81deg);
   margin-top: 20px;
   @media (max-width: 767px) {
