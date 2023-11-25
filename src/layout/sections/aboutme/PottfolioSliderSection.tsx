@@ -9,7 +9,6 @@ export const PortfolioSection = () => {
     return (
         <PortfolioSlider id='Portfolio'>
             <PortfolioTitle>PORTFOLIO</PortfolioTitle>
-
             <PortfolioBlock>
                 <RectanglePortfolio>
                 <PortfolioImg/>
