@@ -34,11 +34,10 @@ const CardBox = styled.div
       box-shadow: 0 4px 20px 5px rgba(0, 0, 0, 0.10);
       position: relative;
       border-radius: 15px;
-      overflow: hidden;
       padding: 10px 10px 22px 10px;
       @media (max-width: 768px) {
         width: 200px;
-        height: 250px;
+        height: 350px;
       }
     `
 const CardImage = styled.img
@@ -47,12 +46,12 @@ const CardImage = styled.img
       background-size: cover;
       width: 280px;
       height: 170px;
-      flex-shrink: 0;
+      flex-shrink: 1;
       border-radius: 10px;
       margin: 10px;
       @media (max-width: 768px) {
         width: 180px;
-        height: 90px;
+        height: 165px;
       }
     `
 const Title = styled.h1`
