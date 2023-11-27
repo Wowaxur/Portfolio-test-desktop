@@ -62,7 +62,7 @@ const BrandLogoBlock = styled.div`
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-row-gap: 50px;
-  padding-bottom: 68px;
+  padding-bottom: 60px;
 
   svg {
     align-self: center;
@@ -85,6 +85,7 @@ const BrandLogoBlock = styled.div`
   @media (max-width: 767px) {
     grid-template-columns: repeat(2, 1fr);
     grid-row-gap: 20px;
+    padding: 10px 0;
 
 
   }
