@@ -51,7 +51,7 @@ const PortfolioTitle = styled.span`
   
   color: #FFF;
   font-family: 'NEXT ART',sans-serif;
-  font-size: 48px;
+  font-size: calc( (100vw - 360px)/(1920 - 360) * (48 - 26) + 26px);
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -129,26 +129,28 @@ const PortfolioText =styled.div`
  const TitlePortfolioText = styled.span`
    color: #ffffff;
    text-align: center;
-   font: 300 24px "Arodora Pro", sans-serif;
-   left: 50px;
+   font-size: calc( (100vw - 360px)/(1920 - 360) * (28 - 18) + 18px);
+   font-weight: 300;
+   margin: 0 auto;
    position: relative;
    display: flex;
    align-items: center;
-   justify-content: flex-start;
+   justify-content: center;
    @media (max-width: 768px) {
      display: flex;
      flex-direction: column;
      text-align: center;
    justify-content: center;
      align-items: center;
-   left: 0;
+      margin: 0 auto;
    } `
 const SimpleTextPortfolio = styled.div`
   margin-top: 20px;
-  padding-bottom: 20px;
+  padding: 0 10px 20px 10px;
   color: #ffffff;
   text-align: center;
-  font: 300 18px "Arodora Pro", sans-serif;
+  font-size: calc( (100vw - 360px)/(1920 - 360) * (18 - 12) + 12px);
+  font-weight: 300;
   position: relative;
   width: 296px;
   display: flex;
