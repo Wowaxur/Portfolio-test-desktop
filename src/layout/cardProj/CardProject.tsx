@@ -10,8 +10,10 @@ export const CardProject = () => {
         <Title>Welcome </Title>
         <Paragraph>Faucibus. Faucibus. Sit sit sapien sit tempusrisu ut. Sit molestie ornare in venen.
         </Paragraph>
+        <BtnBlock>
         <StyledBtn primary>See more</StyledBtn>
         <StyledBtn>Save</StyledBtn>
+        </BtnBlock>
     </CardBox>
 
 </Container>
@@ -25,30 +27,33 @@ const Container = styled.div`
   align-items: center;
   margin-top: 100px;
   margin-bottom: 21px;
+  @media (max-width: 768px) {
+    margin-top: 50px;
+
+  }
 `
 const CardBox = styled.div
     `
-      width: 300px;
-      height: 350px;
+      min-width: 260px;
+      width: 61%;
       background: #FFF;
       box-shadow: 0 4px 20px 5px rgba(0, 0, 0, 0.10);
       position: relative;
       border-radius: 15px;
-      padding: 10px 10px 22px 10px;
+      padding: 20px 10px 10px 10px;
       @media (max-width: 768px) {
         width: 200px;
-        height: 350px;
+        min-width: 200px;
       }
     `
 const CardImage = styled.img
     `
+      margin: 0 auto;
       background: lightgray 50% / cover no-repeat url(${BgImg});
       background-size: cover;
-      width: 280px;
-      height: 170px;
+      width: 95%;
+      min-height: 170px;
       flex-shrink: 1;
-      border-radius: 10px;
-      margin: 10px;
       @media (max-width: 768px) {
         width: 180px;
         height: 165px;
@@ -74,6 +79,13 @@ const Paragraph = styled.p`
   margin: 20px;
   
 `
+const BtnBlock = styled.div `
+  @media (max-width: 768px) {
+    display: flex;
+    flex-direction: row;
+
+  }
+`
 const StyledBtn = styled.button<{ primary?: boolean; }>`
   /* Adapt the colors based on primary prop */
   background: ${props => props.primary ? "#4E71FE" : "white"};
@@ -90,7 +102,9 @@ const StyledBtn = styled.button<{ primary?: boolean; }>`
   word-wrap: break-word;
   margin-left: 12px;
   @media (max-width: 768px) {
-    margin-bottom: 10px;
+    margin: 0 auto;
+    max-width: 80px;
+
   }
 `;
 
