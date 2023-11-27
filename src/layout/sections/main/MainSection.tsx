@@ -71,25 +71,21 @@ const TextTitle = styled.div`
 export const Title = styled.span`
   color: var(--text, #E4E4E4);
   font-family: 'NEXT ART', sans-serif;
-  font-size: 48px;
+  font-size: calc( (100vw - 360px)/(1920 - 360) * (48 - 32) + 32px);
   font-style: normal;
   font-weight: 600;
   line-height: normal;
   margin-bottom: -12%;
-  @media (max-width: 768px) {
-    font-size: 32px;
-  }
+  
 `
 const NameTitle = styled.h2`
   color: var(--text, #E4E4E4);
   font-family: 'NEXT ART', sans-serif;
-  font-size: 72px;
+  font-size: calc( (100vw - 360px)/(1920 - 360) * (72 - 38) + 38px);
   font-style: normal;
   font-weight: 700;
   line-height: normal;
-  @media (max-width: 768px) {
-    font-size: 52px;
-  }
+  
 `
 export const SmallTitle = styled.h1`
   color: #ABB3BA;
