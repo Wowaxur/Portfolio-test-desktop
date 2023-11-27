@@ -80,41 +80,42 @@ const AboutCenterBlock = styled.div`
   z-index: 1;
   border-radius: 15px;
   width: 100%;
-  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  position: sticky;
+  padding-bottom: 25px;
   @media (max-width: 768px) {
     display: flex;
     flex-direction: column;
     max-width: 100%;
     height: auto;
+    padding-bottom: 5px;
+
   }
 `
 const AboutTitle = styled.h3`
   color: var(--text, #e4e4e4);
   text-align: center;
   display: flex;
-  font: 400 48px "NEXT ART", sans-serif;
+  font-size: calc( (100vw - 360px)/(1920 - 360) * (48 - 26) + 26px);
+  font-weight: 400;
   margin-bottom: 36px;
   @media (max-width: 768px) {
-    font: 400 28px "NEXT ART", sans-serif;
+    margin-bottom: 0;
 
   }
 `
 const AboutText = styled.div`
+  position: relative;
   color: #ffffff;
   text-align: left;
-  font: 300 20px "Arodora Pro", sans-serif;
+  font-size: calc( (100vw - 360px)/(1920 - 360) * (20 - 14) + 14px);
+  font-weight: 300;
   width: 370px;
   padding: 10px;
   @media (max-width: 768px) {
-    font: 300 16px "Arodora Pro", sans-serif;
     width: auto;
-    margin: 15px;
-    text-align: left;
-
+    margin: 10px;
   }
 
 
