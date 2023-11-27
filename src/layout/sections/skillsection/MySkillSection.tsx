@@ -9,25 +9,25 @@ export const MySkillSection = () => {
         <SkillSection>
             <SkillBox>
                 <Rectangle width={'270px'} height={'270px'} href={'#'}>
-                    <SkillSvg height={'107'} width={'108'} viewBox={'0 0 107 108 '} IconId='vector-ven'/>
+                    <SkillSvg height={'155'} width={'270'} viewBox={'0 0 7 90 '} IconId='vector-ven'/>
                     <SkillText>Product Design</SkillText>
                 </Rectangle>
             </SkillBox>
             <SkillBox>
                 <Rectangle width={'270px'} height={'270px'} href={'#'}>
-                    <SkillSvg height={'107'} width={'108'} viewBox={'0 0 75 59 '} IconId='display'/>
+                    <SkillSvg height={'155'} width={'230'} viewBox={'0 0 10 90 '} IconId='display'/>
                     <SkillText>Frontend</SkillText>
                 </Rectangle>
             </SkillBox>
             <SkillBox>
                 <Rectangle width={'270px'} height={'270px'} href={'#'}>
-                    <SkillSvg height={'107'} width={'108'} viewBox={'0 0 75 75 '} IconId='nav-icon'/>
+                    <SkillSvg height={'155'} width={'230'} viewBox={'0 0 7 90 '} IconId='nav-icon'/>
                     <SkillText>Icon Design</SkillText>
                 </Rectangle>
             </SkillBox>
             <SkillBox>
                 <Rectangle width={'270px'} height={'270px'} href={'#'}>
-                    <SkillSvg height={'107'} width={'108'} viewBox={'0 0 75 75 '} IconId='design_logo'/>
+                    <SkillSvg height={'155'} width={'230'} viewBox={'0 0 7 90 '} IconId='design_logo'/>
                     <SkillText>Logo Design</SkillText>
                 </Rectangle>
 
