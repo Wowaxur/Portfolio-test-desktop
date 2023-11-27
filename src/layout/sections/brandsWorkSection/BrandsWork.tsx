@@ -5,7 +5,7 @@ import {BrandsIcon} from "../../../components/brandsLogo/BrandsLogo";
 
 export const BrandsWorksSector = () => {
     return (
-        <FlexContainer align={'center'} justify={'center'} direction={'column'} bgc={'#FAFAFA'} borRad={'30px'} margin={'1% 5% 1% 5%'}>
+        <FlexContainer align={'center'} justify={'center'} direction={'column'} bgc={'#FAFAFA'} borRad={'30px'} margin={'5% 5% 1% 5%'}>
             <BrandTitle>Brands I’ve Worked</BrandTitle>
             <BrandLillteText>
                 Things that I can do for my clients. Just make your good trust I love to provide quality works.
@@ -34,7 +34,7 @@ const BrandTitle = styled.h3`
   color: #2D2D2D;
   text-align: center;
   font-family: Raleway, sans-serif;
-  font-size: 48px;
+  font-size: calc( (100vw - 360px)/(1920 - 360) * (48 - 26) + 26px);
   font-style: normal;
   font-weight: 700;
   line-height: normal;
@@ -44,11 +44,10 @@ const BrandTitle = styled.h3`
 `
 const BrandLillteText = styled.p`
   z-index: 1;
-
   color: #909090;
   text-align: center;
   font-family: Lato, sans-serif;
-  font-size: 16px;
+  font-size: calc( (100vw - 360px)/(1920 - 360) * (16 - 12) + 12px);
   font-style: normal;
   font-weight: 400;
   line-height: 185.182%; /* 29.629px */
