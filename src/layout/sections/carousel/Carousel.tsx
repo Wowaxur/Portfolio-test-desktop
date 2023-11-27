@@ -14,6 +14,8 @@ export const Carousel = () => {
         slidesToShow: 3,
         slidesToScroll: 1,
         swipeToSlide: true,
+        centerPadding: '0px',
+        adaptiveHeight:false,
         responsive: [
             {
                 breakpoint: 768,
@@ -49,12 +51,16 @@ const SliderSlick = styled.div`
   align-items: center;
   justify-content: center;
   margin: 0 auto;
+  
   .slick-slide {
     align-items: center;
     transition: 0.7s ease;
     &.slick-center {
       .CardBox {
-        background: linear-gradient(45deg, rgb(246, 146, 89), rgb(241, 105, 117));
+        background: #CEB9C3;
+        background: -moz-linear-gradient(top, #CEB9C3 0%, #C54B69 100%);
+        background: -webkit-linear-gradient(top, #CEB9C3 0%, #C54B69 100%);
+        background: linear-gradient(to bottom, #CEB9C3 0%, #C54B69 100%);
         p {
           color: aliceblue;
         }
@@ -62,11 +68,10 @@ const SliderSlick = styled.div`
 
     }
   }
-}
 .dots-style li[class="slick-active"] button {
   background: #eac8be;
 }
 @media (max-width: 768px) {
   padding: 0 10%;
-
+  }
 `
