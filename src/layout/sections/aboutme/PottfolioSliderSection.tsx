@@ -20,7 +20,6 @@ export const PortfolioSection = () => {
                         <Icon IconId={'secVector'} width={'36'} height={'36'} viewBox={'0 0 25 36'}/>
                     </MoreText>
                 </PortfolioText>
-
             </PortfolioBlock>
         </PortfolioSlider>
     );
@@ -33,17 +32,15 @@ const PortfolioSlider = styled.section<PortfolioSectionProps>`
   text-align: center;
   justify-items: center;
   align-items: center;
-  margin-top: 100px;
+  margin-top: 30px;
   margin-bottom: 21px;
-  
   @media (max-width: 768px) {
     display: flex;
     flex-direction: column;
     justify-items: center;
     max-width: 100%;
     height: auto;
-    margin-top: 55px;
-
+    margin-top: 25px;
   }
 
 `
@@ -132,7 +129,7 @@ const TitlePortfolioText = styled.span`
   color: #ffffff;
   text-align: center;
   font-size: calc( (100vw - 360px)/(1920 - 360) * (28 - 18) + 18px);
-  font-weight: 300;
+  font-weight: 700;
   font-family: Arodora Pro,sans-serif;
   margin: 0 auto;
   position: relative;
@@ -153,7 +150,6 @@ const SimpleTextPortfolio = styled.div`
   color: #ffffff;
   text-align: center;
   font-size: 18px;
-  font-weight: 300;
   font-family: Arodora Pro,sans-serif;
   position: relative;
   display: flex;
@@ -168,10 +164,10 @@ const SimpleTextPortfolio = styled.div`
 `
 const MoreText = styled.div`
   color: #E2A100;
-  font-family: 'Arodora Pro', sans-serif;
+  font-family: Arodora Pro, sans-serif;
   font-size: 18px;
   font-style: normal;
-  font-weight: 300;
+  font-weight: 700;
   line-height: normal;
   transition: .5s;
   a{
@@ -181,5 +177,8 @@ const MoreText = styled.div`
   :hover{
     transform: scale(1.5);
   }
+  @media (max-width: 768px) {
+    padding: 30px;
 
+  }
 `
