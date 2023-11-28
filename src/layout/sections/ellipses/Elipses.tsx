@@ -53,9 +53,10 @@ const BlueElipse = styled.div`
   border-width: 55px;
   width: 486px;
   height: 486px;
-  box-shadow: 0px 4px 70px 0px rgba(0, 193, 236, 0.25);
+  box-shadow: 0 4px 70px 0 rgba(0, 193, 236, 0.25);
   @media (max-width: 768px) {
-    margin-right: 0%;
+    margin-right: 0;
+    margin-top: 150px;
   }
 `
 const OrangeBlock = styled.div`
@@ -65,7 +66,7 @@ const OrangeBlock = styled.div`
   border-width: 34px;
   width: 356px;
   height: 356px;
-  box-shadow: 0px 4px 70px 0px rgba(226, 162, 0, 0.25);
+  box-shadow: 0 4px 70px 0 rgba(226, 162, 0, 0.25);
   @media (max-width: 768px) {
     margin-right: 50%;
   }
