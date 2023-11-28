@@ -1,19 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
+
+@font-face {
+    font-family: "NEXT ART";
+    src: url("assets/fonts/NEXT_ART_Bold.eot?") format("eot"), url("assets/fonts/NEXT_ART_Bold.woff") format("woff"), url("assets/fonts/NEXT_ART_Bold.ttf") format("truetype"), url("assets/fonts/NEXT_ART_Bold.svg#NEXTART-Bold") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Arodora Pro";
+    src: url("assets/fonts/Arodora Pro.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Inter";
+    src: url("assets/fonts/Inter-VariableFont_slnt,wght.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Raleway";
+    src: url("assets/fonts/Raleway-VariableFont_wght.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
 body {
-  background: linear-gradient(101.56deg, rgba(44, 44, 44, 1) 10%, rgba(28, 28, 28, 1) 100%);
-  margin: 0;
-  padding: 0;
-  justify-content: center;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-  sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    background: linear-gradient(101.56deg, rgba(44, 44, 44, 1) 10%, rgba(28, 28, 28, 1) 100%);
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-  monospace;
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
 }
