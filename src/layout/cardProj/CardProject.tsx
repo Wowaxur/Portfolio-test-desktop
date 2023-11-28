@@ -100,6 +100,9 @@ const StyledBtn = styled.button<{ primary?: boolean; }>`
   line-height: 20px;
   word-wrap: break-word;
   margin-left: 12px;
+  :hover {
+    transform: scale(1.1);
+  }
   @media (max-width: 768px) {
     margin: 0 auto;
     max-width: 80px;
