@@ -41,8 +41,7 @@ export const AboutMeSection = () => {
 
 const AboutGroup = styled.section<AboutMeSectionProps>`
   display: flex;
-  margin: 10% 10px 0 10px;
-  align-items: flex-start;
+  margin: 10% 10px 5% 10px;
   position: relative;
   justify-content: center;
   text-align: center;
@@ -60,7 +59,7 @@ const LeftImages = styled.div`
   display: flex;
   flex-direction: column;
   
-  @media (max-width: 767px) {
+  @media (max-width: 768px) {
     margin-right: 40%;
   }
 `
@@ -69,7 +68,6 @@ const RightImg = styled.div`
 `
 const AboutWrapper = styled.div`
   width: 496px;
-  height: 822px;
   
   @media (max-width: 768px) {
     height: auto;
@@ -79,7 +77,6 @@ const AboutCenterBlock = styled.div`
   background: #2c2c2c;
   z-index: 1;
   border-radius: 15px;
-  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -97,6 +94,7 @@ const AboutTitle = styled.h3`
   color: var(--text, #e4e4e4);
   text-align: center;
   display: flex;
+  font-family: NEXT ART, sans-serif;
   font-size: calc( (100vw - 360px)/(1920 - 360) * (48 - 26) + 26px);
   font-weight: 400;
   margin-bottom: 36px;
@@ -109,11 +107,18 @@ const AboutText = styled.div`
   position: relative;
   color: #ffffff;
   text-align: left;
-  font-size: calc( (100vw - 360px)/(1920 - 360) * (20 - 14) + 14px);
+  font-family: Arodora Pro, sans-serif;
+  letter-spacing: 0.2px;
+  line-height: normal;
+  font-style: normal;
+  font-size: 20px;
   font-weight: 300;
   width: 370px;
   padding: 10px;
+  max-height: 700px;
+  overflow: scroll;
   @media (max-width: 768px) {
+    font-size: 14px;
     width: auto;
     margin: 10px;
   }
