@@ -29,7 +29,7 @@ const StyledMain = styled.section<MainSectionProps>`
   display: flex;
   justify-content: center;
   padding-bottom: 200px;
-  @media (max-width: 767px) {
+  @media (max-width: 768px) {
     display: flow;
     flex-direction: column;
     justify-content: center;
@@ -52,7 +52,7 @@ const MyPhoto = styled.img`
   background: lightgray 50% / cover no-repeat url(${MyImg});
   transform: rotate(-9.81deg);
   margin-top: 20px;
-  @media (max-width: 767px) {
+  @media (max-width: 768px) {
     height: 344px;
     width: 324px;;
   }
@@ -62,7 +62,7 @@ const TextTitle = styled.div`
   gap: 10px;
   display: flex;
   flex-direction: column;
-  @media (max-width: 767px) {
+  @media (max-width: 768px) {
     text-align: center;
     justify-content: center;
     align-items: center;
@@ -95,7 +95,7 @@ export const SmallTitle = styled.h1`
   font-weight: 500;
   margin-top: -12%;
   line-height: 20px;
-  @media (max-width: 767px) {
+  @media (max-width: 768px) {
     text-align: center;
   }
 `

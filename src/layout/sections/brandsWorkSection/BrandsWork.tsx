@@ -52,7 +52,7 @@ const BrandLillteText = styled.p`
   font-weight: 400;
   line-height: 185.182%; /* 29.629px */
   letter-spacing: 0.32px;
-  @media (max-width: 767px) {
+  @media (max-width: 768px) {
     margin: 5px 5px;
   }
 `
@@ -82,7 +82,7 @@ const BrandLogoBlock = styled.div`
     }
   }
 
-  @media (max-width: 767px) {
+  @media (max-width: 768px) {
     grid-template-columns: repeat(2, 1fr);
     grid-row-gap: 20px;
     padding: 10px 0;

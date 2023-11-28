@@ -55,12 +55,13 @@ const SkillSection = styled.section`
 `
 const SkillText = styled.span`
   color: var(--text, #e4e4e4);
-  font: 300 24px "Arodora Pro", sans-serif;
+  font-size: calc( (100vw - 360px)/(1920 - 360) * (24 - 12) + 12px);
+  font-family:"Arodora Pro", sans-serif ;
+  font-weight: 500;
   position: relative;
   top: 30px;
   @media (max-width: 768px) {
     top: 0;
-    font: 300 10px "Arodora Pro", sans-serif;
 
 
   }

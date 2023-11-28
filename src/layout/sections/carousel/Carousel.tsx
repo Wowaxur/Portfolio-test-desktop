@@ -10,7 +10,7 @@ export const Carousel = () => {
         centerMode: true,
         dots: false,
         infinite: true,
-        speed: 500,
+        speed: 800,
         slidesToShow: 3,
         slidesToScroll: 1,
         swipeToSlide: true,
@@ -34,7 +34,7 @@ export const Carousel = () => {
 
     return (
         <SliderSlick>
-            <Slider {...settings}>
+            <Slider className={'Slider'} {...settings}>
                 <CardProject/>
                 <CardProject/>
                 <CardProject/>
@@ -48,15 +48,14 @@ export const Carousel = () => {
 
 const SliderSlick = styled.div`
   padding: 0 5%;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto;
-  
+  margin: 10px auto;
   .slick-slide {
     align-items: center;
-    transition: 0.7s ease;
+    transition: 1s ease;
     &.slick-center {
       .CardBox {
+        transition: .5s;
+        transform: scale(1.1);
         background: #CEB9C3;
         background: -moz-linear-gradient(top, #CEB9C3 0%, #C54B69 100%);
         background: -webkit-linear-gradient(top, #CEB9C3 0%, #C54B69 100%);

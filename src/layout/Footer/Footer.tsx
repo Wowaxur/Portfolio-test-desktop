@@ -20,7 +20,7 @@ export const Footer = () => {
                     </FooterTitleBlock>
                 </FirstColumn>
                 <FooterTitleBlock>
-                    <li><a href={'#'}>Contact:</a></li>
+                    <li><span>Contact:</span></li>
                     <li><a href={'#'}>Email: wowaxur@ya.ru</a></li>
                     <li><a href={'#'}>Inst: what_iz__love</a></li>
                     <li><a id={'number'} href={'#'}>Calls: +7 (999) - 123 - 45 -67</a></li>
@@ -89,7 +89,6 @@ const FirstColumn = styled.div`
   @media (max-width: 768px) {
     display: none;
   }
-
   li {
     transition: .5s;
 
@@ -126,7 +125,9 @@ const FooterTitleBlock = styled.ul`
   li {
     margin-top: 15px;
   }
-
+  span {
+    color: var(--text, #E4E4E4);
+  }
 
 `
 const NicKLogoBlock = styled.div`

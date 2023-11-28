@@ -20,9 +20,11 @@ const StyledGreySector = styled.section`
   position: relative;
   flex-direction: column;
   border-radius: 35px;
+  margin: 0 25px;
   background: var(--Gray2, linear-gradient(130deg, #414141 0%, #2D2D2D 100%));
   display: flex;
-  @media (max-width: 767px) {
+  @media (max-width: 768px) {
+    margin: auto;
 
   }
 `

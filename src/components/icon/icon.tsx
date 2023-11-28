@@ -40,7 +40,7 @@ export const SkillSvg = (props: SkillSvgPropsType) => {
 const SkillSvgStyled = styled.svg`
     padding: 51px 72px 0px 72px; 
    position: relative;
-  @media (max-width: 767px) {
+  @media (max-width: 768px) {
     padding: 10px;
     width: 50px;
     height: 50px;

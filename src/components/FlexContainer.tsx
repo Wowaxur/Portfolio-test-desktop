@@ -19,7 +19,7 @@ export const FlexContainer = styled.div<FlexContainerPropsType>`
   align-items: ${props => props.align || 'stretch'};
   flex-wrap: ${props => props.wrap|| 'nowrap'}; 
   margin: ${props => props.margin|| 'auto'};  ;
-  @media (max-width: 767px) { display: flex;
+  @media (max-width: 768px) { display: flex;
     flex-direction: column;
     
 

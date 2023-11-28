@@ -30,7 +30,7 @@ const StyledMenu = styled.nav`
     font-style: normal;
     font-weight: 300;
     line-height: normal;
-    @media (max-width: 767px) {
+    @media (max-width: 768px) {
     justify-content: center;
       gap: 15px;
     }
@@ -44,12 +44,12 @@ const StyledMenu = styled.nav`
     }
   }
   
-  @media (max-width: 767px) {
+  @media (max-width: 768px) {
     flex-wrap: wrap;
     align-self: flex-end;
     flex-direction: column;
     justify-content: center;
-    max-width: 767px;
+    max-width: 768px;
     width: 100%;
   }
 `

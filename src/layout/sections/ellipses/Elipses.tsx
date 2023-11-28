@@ -13,19 +13,17 @@ export const Elipses = () => {
     );
 };
 const ElipsesBlock = styled.section`
-  height: 100%;
+  width: 100%;
+  padding-top: 10%;
   box-sizing: border-box;
   display: flex;
   position: absolute;
   flex-wrap: wrap;
   flex-direction: row;
   z-index: 0;
-  margin-top: 150px;
-  margin-left: 15%;
-  @media (max-width: 767px) {
-    display: flex;
-    flex-wrap: wrap;
-    
+  justify-content: center;
+  @media (max-width: 768px) {
+    display: block;
   }
 `
 const RightElipses = styled.div`

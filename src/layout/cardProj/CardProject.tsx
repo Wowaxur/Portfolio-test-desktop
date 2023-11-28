@@ -22,10 +22,10 @@ export const CardProject = () => {
 
 
 const Container = styled.div`
+  margin-top: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 100px;
   margin-bottom: 21px;
   @media (max-width: 768px) {
     margin-top: 50px;
@@ -33,21 +33,20 @@ const Container = styled.div`
   }
 `
 const CardBox = styled.div
-    `
-      min-width: 260px;
-      width: 61%;
+    ` 
+      max-width: 300px;
       background: #FFF;
       box-shadow: 0 4px 20px 5px rgba(0, 0, 0, 0.10);
       position: relative;
       border-radius: 15px;
-      padding: 20px 10px 10px 10px;
+      padding: 10px 10px 10px 10px;
       @media (max-width: 768px) {
         width: 200px;
         min-width: 200px;
       }
     `
 const CardImage = styled.img
-    `
+    ` 
       margin: 0 auto;
       background: lightgray 50% / cover no-repeat url(${BgImg});
       background-size: cover;

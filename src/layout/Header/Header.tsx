@@ -20,6 +20,7 @@ const StyledHeader = styled.header`
   justify-content: center;
   text-align: center;
   padding-left:30px;
+  padding-top: 15px;
   a{
     text-decoration: none;
     color: var(--text, #e4e4e4);
@@ -29,7 +30,7 @@ const StyledHeader = styled.header`
     justify-content: space-around;
     position: relative;
   }
-  @media (max-width: 767px) {
+  @media (max-width: 768px) {
     padding-left:0;
     padding-right: 30px;
     flex-wrap: wrap;

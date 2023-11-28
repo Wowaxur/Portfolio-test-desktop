@@ -18,7 +18,7 @@ const LokiBody = styled.img`
   transition: .3s;
   :hover {
     transform: scale(1.17);}
-  @media (max-width: 767px) {
+  @media (max-width: 768px) {
     width: 150px;
     height: 150px;
     margin-top: 10%;
