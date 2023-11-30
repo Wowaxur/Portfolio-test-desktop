@@ -14,7 +14,7 @@ export const Elipses = () => {
 };
 const ElipsesBlock = styled.section`
   width: 100%;
-  padding-top: 10%;
+  padding-top: 15%;
   box-sizing: border-box;
   display: flex;
   position: absolute;

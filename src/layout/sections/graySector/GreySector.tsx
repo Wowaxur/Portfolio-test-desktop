@@ -2,21 +2,19 @@ import React from 'react';
 import {AboutMeSection} from "../aboutme/AboutMeSection";
 import styled from "styled-components";
 import {MySkillSection} from "../skillsection/MySkillSection";
-import {Elipses} from "../ellipses/Elipses";
-import {PortfolioSection} from "../aboutme/PottfolioSliderSection";
 import {Carousel} from "../carousel/Carousel";
 export const GreySector = () => {
     return (
         <StyledGreySector>
-            <Elipses/>
             <MySkillSection/>
             <AboutMeSection/>
-            <PortfolioSection/>
+            <Carousel/>
         </StyledGreySector>
     );
 };
 
 const StyledGreySector = styled.section`
+  width: 98%;
   position: relative;
   flex-direction: column;
   border-radius: 35px;
@@ -25,6 +23,6 @@ const StyledGreySector = styled.section`
   display: flex;
   @media (max-width: 768px) {
     margin: auto;
-
   }
+  
 `

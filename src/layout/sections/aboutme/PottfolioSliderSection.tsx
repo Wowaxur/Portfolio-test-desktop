@@ -2,13 +2,13 @@ import React from 'react';
 import styled from "styled-components";
 import Universe from '../../../assets/images/imageUni.webp'
 import {Icon} from "../../../components/icon/icon";
+import 'react-alice-carousel/lib/alice-carousel.css';
 interface PortfolioSectionProps {
     id?: string; // Указываем, что 'id' - это строка
 }
 export const PortfolioSection = () => {
     return (
         <PortfolioSlider id='Portfolio'>
-            <PortfolioTitle>PORTFOLIO</PortfolioTitle>
             <PortfolioBlock>
                 <RectanglePortfolio>
                     <PortfolioImg/>
@@ -27,7 +27,8 @@ export const PortfolioSection = () => {
 
 const PortfolioSlider = styled.section<PortfolioSectionProps>`
   display: flex;
-  z-index: 1;
+  z-index: 2;
+  position: relative;
   flex-direction: column;
   text-align: center;
   justify-items: center;
@@ -44,17 +45,7 @@ const PortfolioSlider = styled.section<PortfolioSectionProps>`
   }
 
 `
-const PortfolioTitle = styled.span`
 
-  color: #FFF;
-  font-family: 'NEXT ART',sans-serif;
-  font-size: calc( (100vw - 360px)/(1920 - 360) * (48 - 26) + 26px);
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  @media (max-width: 768px) {
-    padding: 10px;
-`
 const PortfolioBlock = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr; // Добавьте это
@@ -76,6 +67,7 @@ const PortfolioBlock = styled.div`
 
 `
 const RectanglePortfolio = styled.div`
+  z-index: 1;
   background: #c4c4c4;
   max-width: 493px;
   max-height: 500px;
@@ -94,8 +86,10 @@ const RectanglePortfolio = styled.div`
   }
 `
 const PortfolioImg = styled.img`
+  z-index: 1;
   width: 100%;
   height: 100%;
+  object-fit: cover;
   position: relative;
   border-radius: 29px;
   background:url(${Universe}) lightgray 0.283px 0px / 100% 100% no-repeat ;
@@ -125,10 +119,10 @@ const PortfolioText =styled.div`
     justify-items: center;
   }
 `
-const TitlePortfolioText = styled.span`
+const TitlePortfolioText = styled.h3`
   color: #ffffff;
   text-align: center;
-  font-size: calc( (100vw - 360px)/(1920 - 360) * (28 - 18) + 18px);
+  font-size: clamp(18px, calc(1vw + 1vh + .5vmin), 28px);
   font-weight: 700;
   font-family: Arodora Pro,sans-serif;
   margin: 0 auto;
@@ -148,7 +142,7 @@ const SimpleTextPortfolio = styled.div`
   margin-top: 20px;
   padding: 0 10px 20px 10px;
   color: #ffffff;
-  text-align: center;
+  text-align: left;
   font-size: 18px;
   font-family: Arodora Pro,sans-serif;
   position: relative;

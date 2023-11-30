@@ -21,9 +21,9 @@ export const Footer = () => {
                 </FirstColumn>
                 <FooterTitleBlock>
                     <li><span>Contact:</span></li>
-                    <li><a href={'#'}>Email: wowaxur@ya.ru</a></li>
-                    <li><a href={'#'}>Inst: what_iz__love</a></li>
-                    <li><a id={'number'} href={'#'}>Calls: +7 (999) - 123 - 45 -67</a></li>
+                    <li><span> Email: Wowaxur@ya.ru</span></li>
+                    <li><span>Telegram: Wowaxur</span></li>
+                    <li><span>Calls: +7 (961) - 584 - 29 -32</span></li>
                 </FooterTitleBlock>
             </MobileFootWrapper>
             <NicKLogoBlock>
@@ -148,6 +148,10 @@ const Copyright = styled.small`
   line-height: normal;
 `
 const EclipseVector = styled.span`
+  position: absolute;
+  margin-top: 25px; 
+  @media (max-width: 768px) {  position: relative;
+  }
   
   svg {
     transition: .5s;

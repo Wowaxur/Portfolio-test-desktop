@@ -9,26 +9,28 @@ export const StyledLokiFace = () => {
 };
 
 const LokiFace = styled.img`
-  margin: 29px;
-  width: 270px;
-  height: 281px;
+  z-index: 1;
+  width: 280px;
+  height: 280px;
   position: relative;
   border-radius: 5%;
   box-shadow: 0 0 0 6px rgba(104, 104, 104, 1);
-  background: url(${LokiOne})  lightgray 50% / cover no-repeat;
+  background-image:url(${LokiOne});
+  background-size: cover;
+  background-repeat: no-repeat;
   transition: .3s;
-  :hover {
-    transform: scale(1.18);}
+  
 
 `
 const StyledRectangle = styled.div`
+  z-index: 1;
   background: #2c2c2c;
   border-radius: 14px;
   position: relative;
-  height: 339px;
+  height: 330px;
   margin-bottom: 50%;
   box-shadow: 0 4px 15px 0 rgba(27, 27, 27, 1);
-
+  padding: 24px;
   @media (max-width: 768px) {
     display: none;
   }

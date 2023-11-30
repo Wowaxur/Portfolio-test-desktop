@@ -8,25 +8,25 @@ export const MySkillSection = () => {
     return (
         <SkillSection>
             <SkillBox>
-                <Rectangle width={'270px'} height={'270px'} href={'#'}>
+                <Rectangle width={'270px'} height={'270px'} >
                     <SkillSvg height={'155'} width={'270'} viewBox={'0 0 7 90 '} IconId='vector-ven'/>
                     <SkillText>Product Design</SkillText>
                 </Rectangle>
             </SkillBox>
             <SkillBox>
-                <Rectangle width={'270px'} height={'270px'} href={'#'}>
+                <Rectangle width={'270px'} height={'270px'} >
                     <SkillSvg height={'155'} width={'230'} viewBox={'0 0 10 90 '} IconId='display'/>
                     <SkillText>Frontend</SkillText>
                 </Rectangle>
             </SkillBox>
             <SkillBox>
-                <Rectangle width={'270px'} height={'270px'} href={'#'}>
+                <Rectangle width={'270px'} height={'270px'}>
                     <SkillSvg height={'155'} width={'230'} viewBox={'0 0 7 90 '} IconId='nav-icon'/>
                     <SkillText>Icon Design</SkillText>
                 </Rectangle>
             </SkillBox>
             <SkillBox>
-                <Rectangle width={'270px'} height={'270px'} href={'#'}>
+                <Rectangle width={'270px'} height={'270px'}>
                     <SkillSvg height={'155'} width={'230'} viewBox={'0 0 7 90 '} IconId='design_logo'/>
                     <SkillText>Logo Design</SkillText>
                 </Rectangle>
@@ -37,6 +37,7 @@ export const MySkillSection = () => {
 };
 
 const SkillSection = styled.section`
+  z-index: 2;
   gap: 32px;
   justify-content: center;
   flex-wrap: wrap;

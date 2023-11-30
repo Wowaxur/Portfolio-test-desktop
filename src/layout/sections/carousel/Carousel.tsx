@@ -1,76 +1,57 @@
-import React from "react";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import AliceCarousel from "react-alice-carousel";
+import 'react-alice-carousel/lib/alice-carousel.css';
+import React from 'react';
+import {PortfolioSection} from "../aboutme/PottfolioSliderSection";
 import styled from "styled-components";
-import Slider from 'react-slick'
-import {CardProject} from "../../cardProj/CardProject";
+import '../../../components/styles/slyder.css'
+interface PortfolioSectionProps {
+    id?: string; // Указываем, что 'id' - это строка
+}
+const PortfolioItems = [
+    <PortfolioSection key='1'/>,
+    <PortfolioSection key='2'/>,
+    <PortfolioSection key='3'/>,
+
+];
 
 export const Carousel = () => {
-    let settings = {
-        centerMode: true,
-        dots: false,
-        infinite: true,
-        speed: 800,
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        swipeToSlide: true,
-        centerPadding: '0px',
-        adaptiveHeight:false,
-        responsive: [
-            {
-                breakpoint: 768,
-                settings: {
-                    centerMode: false,
-                    adaptiveHeight: true,
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                    infinite: true,
-                    dots: false
-                }
-            }
-        ]
-    };
-
 
     return (
-        <SliderSlick>
-            <Slider className={'Slider'} {...settings}>
-                <CardProject/>
-                <CardProject/>
-                <CardProject/>
-                <CardProject/>
-                <CardProject/>
-            </Slider>
-        </SliderSlick>
+        /* <StyledAliceCarousel infinite keyboardNavigation items={PortfolioItems} mouseTracking />*/
+        <PortfolioSlider id='Portfolio'>
+            <PortfolioTitle>PORTFOLIO</PortfolioTitle>
+            <AliceCarousel infinite keyboardNavigation items={PortfolioItems} mouseTracking></AliceCarousel>
+        </PortfolioSlider>
     );
 
 };
-
-const SliderSlick = styled.div`
-  padding: 0 5%;
-  margin: 10px auto;
-  .slick-slide {
-    align-items: center;
-    transition: 1s ease;
-    &.slick-center {
-      .CardBox {
-        transition: .5s;
-        transform: scale(1.1);
-        background: #CEB9C3;
-        background: -moz-linear-gradient(top, #CEB9C3 0%, #C54B69 100%);
-        background: -webkit-linear-gradient(top, #CEB9C3 0%, #C54B69 100%);
-        background: linear-gradient(to bottom, #CEB9C3 0%, #C54B69 100%);
-        p {
-          color: aliceblue;
-        }
-      }
-
-    }
+const PortfolioSlider = styled.section<PortfolioSectionProps>`
+  z-index: 2;
+  position: relative;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  margin-top: 30px;
+  margin-bottom: 21px;
+  
+  @media (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    max-width: 100%;
+    height: auto;
+    margin-top: 25px;
   }
-.dots-style li[class="slick-active"] button {
-  background: #eac8be;
-}
-@media (max-width: 768px) {
-  padding: 0 10%;
-  }
+
+`
+const PortfolioTitle = styled.h2` 
+  color: #FFF;
+  text-align: center;
+  font-family: 'NEXT ART',sans-serif;
+  font-size: clamp(32px, calc(1vw + 1vh + .5vmin), 48px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  @media (max-width: 768px) {
+    padding: 10px;
 `

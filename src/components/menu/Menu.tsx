@@ -20,6 +20,7 @@ export const Menu = () => {
 const StyledMenu = styled.nav`
   width: 100%;
   ul {
+    white-space: nowrap;
     align-self: center;
     justify-content: space-around;
     List-style-type: none;
@@ -32,7 +33,7 @@ const StyledMenu = styled.nav`
     line-height: normal;
     @media (max-width: 768px) {
     justify-content: center;
-      gap: 15px;
+      gap: 10px;
     }
   }
 
