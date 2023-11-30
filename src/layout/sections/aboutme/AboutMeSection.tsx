@@ -31,9 +31,7 @@ export const AboutMeSection = () => {
                 </AboutText>
             </AboutCenterBlock>
             </AboutWrapper>
-            <RightImg>
                 <StyledLokiNose/>
-            </RightImg>
         </AboutGroup>
     );
 };
@@ -53,22 +51,39 @@ const AboutGroup = styled.section<AboutMeSectionProps>`
   img {
     border-radius: 5%;
   }
-
+  &::before {
+    z-index: 0;
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    border-style: solid;
+    border-color: var(--text, #e4e4e4);
+    border-width: 89px;
+    width: 640px;
+    height: 640px;
+    // Adjust these values to position the ellipse correctly
+    top: 0;
+    left: 10%;
+    transition: 1s;
+  }
+  @media (max-width: 768px) {
+    &::before {
+      top: 0;
+      left: -550px;
+      
+    }  }
 `
 const LeftImages = styled.div`
+  z-index: 2;
   display: flex;
   flex-direction: column;
-  
   @media (max-width: 768px) {
     margin-right: 40%;
   }
 `
-const RightImg = styled.div`
-  flex-wrap: nowrap;
-`
 const AboutWrapper = styled.div`
   width: 496px;
-  
+  z-index: 1;
   @media (max-width: 768px) {
     height: auto;
   }
@@ -87,21 +102,21 @@ const AboutCenterBlock = styled.div`
     max-width: 100%;
     height: auto;
     padding-bottom: 5px;
-
   }
+  
 `
-const AboutTitle = styled.h3`
+const AboutTitle = styled.h2`
   color: var(--text, #e4e4e4);
   text-align: center;
   display: flex;
   font-family: NEXT ART, sans-serif;
-  font-size: calc( (100vw - 360px)/(1920 - 360) * (48 - 26) + 26px);
+  font-size: clamp(32px, calc(1vw + 1vh + .5vmin), 48px);
   font-weight: 400;
   margin-bottom: 36px;
   @media (max-width: 768px) {
     margin-bottom: 0;
-
   }
+  
 `
 const AboutText = styled.div`
   position: relative;
@@ -116,11 +131,49 @@ const AboutText = styled.div`
   width: 370px;
   padding: 10px;
   max-height: 700px;
-  overflow: scroll;
+  &::before {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    border-style: solid;
+    border-color: var(--blu, #00c4f0);
+    border-width: 55px;
+    width: 486px;
+    height: 486px;
+    box-shadow: 0 4px 70px 0 rgba(0, 193, 236, 0.25);
+    // Adjust these values to position the ellipse correctly
+    top: 15%;
+    left: 45%;
+    transition: 1s;
+  }
+  &::after {
+    z-index: -2;
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    border-style: solid;
+    border-color: #e2a200;
+    border-width: 34px;
+    width: 356px;
+    height: 356px;
+    box-shadow: 0 4px 70px 0 rgba(226, 162, 0, 0.25);
+    // Adjust these values to position the block correctly
+    bottom: 80%;
+    left: 50%;
+    transition: 1s;
+  }
   @media (max-width: 768px) {
     font-size: 14px;
     width: auto;
     margin: 10px;
+    &::before {
+      left:0;
+      top: 180%;
+    }
+    &::after {
+      left:0;
+      bottom: 100%;    }
   }
 
 
