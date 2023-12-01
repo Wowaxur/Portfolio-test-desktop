@@ -30,6 +30,7 @@ const TechStack = styled.section`
   position: relative;
   z-index: 2;
 `
+
 const BrandTitle = styled.h3`
   z-index: 1;
   color: #ffffff;
@@ -43,6 +44,7 @@ const BrandTitle = styled.h3`
   text-transform: capitalize;
   margin-bottom: 5px;
 `
+
 const BrandLillteText = styled.p`
   z-index: 1;
   color: #909090;
@@ -58,6 +60,7 @@ const BrandLillteText = styled.p`
     margin: 5px 5px;
   }
 `
+
 const BrandLogoBlock = styled.div`
   padding: 30px;
   z-index: 2;
