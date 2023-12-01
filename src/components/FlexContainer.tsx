@@ -7,6 +7,7 @@ import styled from "styled-components";
      bgc?: string
      margin?: string
      borRad?: string
+     padding?: string
 }
 
 export const FlexContainer = styled.div<FlexContainerPropsType>`
@@ -17,7 +18,8 @@ export const FlexContainer = styled.div<FlexContainerPropsType>`
   justify-content: ${props => props.justify || 'flex-start'};
   align-items: ${props => props.align || 'stretch'};
   flex-wrap: ${props => props.wrap|| 'nowrap'}; 
-  margin: ${props => props.margin|| 'auto'};  ;
+  margin: ${props => props.margin|| 'auto'}; 
+  padding: ${props => props.padding|| '0'};
   @media (max-width: 768px) { display: flex;
     flex-direction: column;
     

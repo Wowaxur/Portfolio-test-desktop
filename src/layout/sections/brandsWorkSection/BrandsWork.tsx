@@ -7,14 +7,14 @@ const iconIds = ['1-1', '1-2', '1-3', '1-4', '1-5', '1-6', '2-1', '2-2', '2-3', 
 
 export const BrandsWorksSector = () => {
     return (
-        <FlexContainer align={'center'} justify={'center'} direction={'column'} bgc={'#FAFAFA'} borRad={'30px'} margin={'5% 5% 1% 5%'}>
+        <FlexContainer align={'center'} justify={'center'} direction={'column'} bgc={'#FAFAFA'} borRad={'30px'} margin={'30px 5% 20px 5%'}>
             <BrandTitle>Brands I’ve Worked</BrandTitle>
             <BrandLillteText>
                 Things that I can do for my clients. Just make your good trust I love to provide quality works.
             </BrandLillteText>
             <BrandLogoBlock>
                 {iconIds.map((iconId, index) =>
-                    <BrandsIcon key={index} height={'78'} width={'78'} viewBox={'0 0 78 78'} IconId={iconId} />
+                    <BrandsIcon key={index} height={'78'} width={'78'} viewBox={'0 0 87 87'} IconId={iconId} />
                 )}
             </BrandLogoBlock>
         </FlexContainer>
@@ -42,8 +42,9 @@ const BrandLillteText = styled.p`
   font-size: calc( (100vw - 360px)/(1920 - 360) * (16 - 12) + 12px);
   font-style: normal;
   font-weight: 400;
-  line-height: 185.182%; /* 29.629px */
-  letter-spacing: 0.32px;
+  line-height: 185%; /* 29.629px */
+  letter-spacing: 0.3px;
+  padding: 0 20px;
   @media (max-width: 768px) {
     margin: 5px 5px;
   }

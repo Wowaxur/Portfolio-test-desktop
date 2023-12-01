@@ -1,29 +1,76 @@
 import React from 'react';
 import styled from "styled-components";
 import Universe from '../../../assets/images/imageUni.webp'
-import {Icon} from "../../../components/icon/icon";
+import Shoes from '../../../assets/images/imageShoes.png'
+import ClearMix from '../../../assets/images/clearMix.png'
+import Bakery from '../../../assets/images/BakeryLanding.png'
 import 'react-alice-carousel/lib/alice-carousel.css';
+const data = [
+    {
+        id: 1,
+        title: 'Landing Ice-cream',
+        text: 'when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.',
+        image:Universe,
+        url: 'https://github.com/Wowaxur'
+    },
+    {
+        id: 2,
+        title: 'Shoe Store Ecommerce Landing Page',
+        text: 'when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. ',
+        image:Shoes,
+        url: 'https://github.com/Wowaxur'
+
+    },
+    {
+        id: 3,
+        title: 'ClearMix Landing page',
+        text: 'when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. ',
+        image:ClearMix,
+        url: 'https://github.com/Wowaxur'
+
+    },
+    {
+        id: 4,
+        title: 'Bakery Landing Page Design',
+        text: 'when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. ',
+        image:Bakery,
+        url: 'https://github.com/Wowaxur'
+
+
+    },
+    // другие элементы
+];
+
+
 interface PortfolioSectionProps {
-    id?: string; // Указываем, что 'id' - это строка
+    id: string; // Указываем, что 'id' - это строка
 }
-export const PortfolioSection = () => {
+export const PortfolioSection: React.FC<PortfolioSectionProps> = ({ id }) => {
+    const itemId = Number(id); // Преобразуем id в число
+    const item = data.find(item => item.id === itemId);
+
+    if (!item) {
+        return null; // или другая обработка ошибок
+    }
+
     return (
         <PortfolioSlider id='Portfolio'>
-            <PortfolioBlock>
+            <PortfolioBlock key={item.id}>
                 <RectanglePortfolio>
-                    <PortfolioImg/>
+                    <PortfolioImg src={item.image} />
                 </RectanglePortfolio>
                 <PortfolioText>
-                    <TitlePortfolioText>Landing Ice-cream</TitlePortfolioText>
-                    <SimpleTextPortfolio>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut orci eu elit consequat posuere ut sed elit. Nulla et tristique felis. Morbi quis orci non purus blandit fringilla. Etiam et mollis eros. Duis venenatis vulputate lacus, non tristique eros placerat vel. Nam nec magna lacus. Etiam euismod egestas mauris nec mollis. Phasellus efficitur et ex vel condimentum. Cras enim purus, tempor sed massa vel, accumsan bibendum magna. Nullam hendrerit cursus purus, sit amet viverra arcu gravida vel.</SimpleTextPortfolio>
-                    <MoreText><a href={'#'}> More</a>
-                        <Icon IconId={'secVector'} width={'36'} height={'36'} viewBox={'0 0 25 36'}/>
-                    </MoreText>
+                    <TitlePortfolioText>{item.title}</TitlePortfolioText>
+                    <SimpleTextPortfolio>{item.text}</SimpleTextPortfolio>
+                    <DetailsBtn>
+                        <a href={item.url} target={'_blank'}> Details</a>
+                    </DetailsBtn>
                 </PortfolioText>
             </PortfolioBlock>
         </PortfolioSlider>
     );
 };
+
 
 const PortfolioSlider = styled.section<PortfolioSectionProps>`
   display: flex;
@@ -55,7 +102,7 @@ const PortfolioBlock = styled.div`
   margin-top: 30px;
   background: var(--Gray2, linear-gradient(131deg, #414141 0%, #2D2D2D 100.52%));
   box-shadow: 0 4px 15px 0 rgba(27, 27, 27, 1);
-  max-width: 970px;
+  max-width: 765px;
   min-height: 600px;
   flex-shrink: 0;
   @media (max-width: 768px) {
@@ -92,10 +139,11 @@ const PortfolioImg = styled.img`
   object-fit: cover;
   position: relative;
   border-radius: 29px;
-  background:url(${Universe}) lightgray 0.283px 0px / 100% 100% no-repeat ;
+  background-image: url(${props => props.src});
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
   @media (max-width: 768px) {
     height: 300px;
-
   }
 `
 const PortfolioText =styled.div`
@@ -156,23 +204,36 @@ const SimpleTextPortfolio = styled.div`
 
   }
 `
-const MoreText = styled.div`
+const DetailsBtn = styled.button`
   color: #E2A100;
+  background: transparent;
   font-family: Arodora Pro, sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
+  width: 150px;
+  height: 50px;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
   transition: .5s;
-  a{
+  border-radius: 10px;
+  border: 1px solid #FCC028;
+  a{display: inline-block;
+    width: 100%;
+    height: 100%;
+    padding-top: 10px;
     text-decoration: none;
     color: #E2A100;
   }
   :hover{
-    transform: scale(1.5);
+    transform: scale(1.2);
+    animation: pulse 2s infinite;
   }
   @media (max-width: 768px) {
-    padding: 30px;
-
+    margin: 30px auto;
+    padding: 12px;
   }
 `

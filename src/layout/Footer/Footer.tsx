@@ -19,12 +19,6 @@ export const Footer = () => {
                        <Menu/>
                     </FooterTitleBlock>
                 </FirstColumn>
-                <FooterTitleBlock>
-                    <li><span>Contact:</span></li>
-                    <li><span> Email: Wowaxur@ya.ru</span></li>
-                    <li><span>Telegram: Wowaxur</span></li>
-                    <li><span>Calls: +7 (961) - 584 - 29 -32</span></li>
-                </FooterTitleBlock>
             </MobileFootWrapper>
             <NicKLogoBlock>
                 <MobileFootWrapper>
@@ -78,7 +72,7 @@ const MobileFootWrapper = styled.div`
     display: flex;
     flex-wrap: wrap;
     text-align: center;
-    flex-direction: column;
+    flex-direction: row;
 
   }
 `
@@ -133,6 +127,7 @@ const FooterTitleBlock = styled.ul`
 const NicKLogoBlock = styled.div`
   margin-top: 40px;
   @media (max-width: 768px) {
+    
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -150,7 +145,10 @@ const Copyright = styled.small`
 const EclipseVector = styled.span`
   position: absolute;
   margin-top: 25px; 
-  @media (max-width: 768px) {  position: relative;
+  @media (max-width: 768px) {
+    margin-top:15px;
+    position: absolute;
+    left: 75%;
   }
   
   svg {

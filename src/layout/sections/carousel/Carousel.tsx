@@ -8,11 +8,11 @@ interface PortfolioSectionProps {
     id?: string; // Указываем, что 'id' - это строка
 }
 const PortfolioItems = [
-    <PortfolioSection key='1'/>,
-    <PortfolioSection key='2'/>,
-    <PortfolioSection key='3'/>,
-
+    <PortfolioSection id={'1'} key='1'/>,
+    <PortfolioSection id={'2'} key='2'/>,
+    <PortfolioSection id={'3'} key='3'/>,
 ];
+
 
 export const Carousel = () => {
 

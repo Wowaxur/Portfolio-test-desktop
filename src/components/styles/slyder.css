@@ -11,9 +11,10 @@
 }
 
 .alice-carousel__prev-btn {
-    left: -45%;
+    left: calc(-765px/2 + 50px);
+    
 }
 
 .alice-carousel__next-btn {
-    right: -45%;
+    right: calc(-765px/2 + 50px);
 }
