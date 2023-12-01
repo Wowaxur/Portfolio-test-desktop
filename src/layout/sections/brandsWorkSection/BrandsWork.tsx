@@ -1,5 +1,4 @@
 import React from 'react';
-import {FlexContainer} from "../../../components/FlexContainer";
 import styled from "styled-components";
 import {BrandsIcon} from "../../../components/brandsLogo/BrandsLogo";
 
