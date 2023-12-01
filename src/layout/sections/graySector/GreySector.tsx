@@ -6,7 +6,7 @@ import {Carousel} from "../carousel/Carousel";
 export const GreySector = () => {
     return (
         <StyledGreySector>
-            <MySkillSection/>
+            {/*<MySkillSection/>*/}
             <AboutMeSection/>
             <Carousel/>
         </StyledGreySector>

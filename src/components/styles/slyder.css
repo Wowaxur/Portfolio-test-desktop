@@ -3,18 +3,16 @@
     position: absolute;
     top: 50%;
     font-size: 70px;
-    @media (max-width: 768px) {
-    display: none;
-    }
+
 
 
 }
 
 .alice-carousel__prev-btn {
-    left: calc(-765px/2 + 50px);
+    left: calc(-950px/2 + 50px);
     
 }
 
 .alice-carousel__next-btn {
-    right: calc(-765px/2 + 50px);
+    right: calc(-950px/2 + 50px);
 }

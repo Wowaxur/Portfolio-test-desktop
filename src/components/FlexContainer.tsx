@@ -12,6 +12,7 @@ import styled from "styled-components";
 
 export const FlexContainer = styled.div<FlexContainerPropsType>`
  display: flex;
+  position: relative;
   border-radius: ${props => props.borRad || 'none'};
   background-color: ${props => props.bgc || 'none'};
   flex-direction: ${props => props.direction || 'row'};
@@ -20,6 +21,7 @@ export const FlexContainer = styled.div<FlexContainerPropsType>`
   flex-wrap: ${props => props.wrap|| 'nowrap'}; 
   margin: ${props => props.margin|| 'auto'}; 
   padding: ${props => props.padding|| '0'};
+  z-index: 2;
   @media (max-width: 768px) { display: flex;
     flex-direction: column;
     

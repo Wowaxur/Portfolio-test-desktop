@@ -28,7 +28,7 @@ export const MainSection = () => {
 const StyledMain = styled.section<MainSectionProps>`
   display: flex;
   justify-content: center;
-  padding-bottom: 200px;
+  padding-bottom: 20px;
   @media (max-width: 768px) {
     display: flow;
     flex-direction: column;
@@ -37,7 +37,6 @@ const StyledMain = styled.section<MainSectionProps>`
 
 `
 const PhotoWrapp = styled.div`
-  
   display: flex;
   justify-content: center;
   align-items: center;
@@ -47,7 +46,7 @@ const MyPhoto = styled.img`
   position: relative;
   width: 524px;
   height: 544px;
-  border-radius: 100%;
+  border-radius: 50%;
   border: 25px solid var(--blu, #00C4F0);
   box-shadow: 0 0 152px 0 rgba(0, 196, 240, 0.42);
   background-image:url(${MyImg});
@@ -57,7 +56,9 @@ const MyPhoto = styled.img`
   margin-top: 100px;
   @media (max-width: 768px) {
     height: 344px;
-    width: 324px;;
+    width: 344px;;
+    margin-top: 10px;
+
   }
 `
 const TextTitle = styled.div`

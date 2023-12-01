@@ -7,23 +7,33 @@ const iconIds = ['1-1', '1-2', '1-3', '1-4', '1-5', '1-6', '2-1', '2-2', '2-3', 
 
 export const BrandsWorksSector = () => {
     return (
-        <FlexContainer align={'center'} justify={'center'} direction={'column'} bgc={'#FAFAFA'} borRad={'30px'} margin={'30px 5% 20px 5%'}>
-            <BrandTitle>Brands I’ve Worked</BrandTitle>
+        <TechStack>
+            <BrandTitle>My Tech Stack</BrandTitle>
             <BrandLillteText>
-                Things that I can do for my clients. Just make your good trust I love to provide quality works.
+                Technologies I’ve been working with recently
             </BrandLillteText>
             <BrandLogoBlock>
                 {iconIds.map((iconId, index) =>
-                    <BrandsIcon key={index} height={'78'} width={'78'} viewBox={'0 0 87 87'} IconId={iconId} />
+                    <BrandsIcon
+                        key={index}
+                        height={iconId === '2-3' ? '70' : '100'}
+                        width= '120'
+                        viewBox={'0 0 120 130'}
+                        IconId={iconId}
+                    />
                 )}
             </BrandLogoBlock>
-        </FlexContainer>
+        </TechStack>
     );
 };
 
+const TechStack = styled.section`
+  position: relative;
+  z-index: 2;
+`
 const BrandTitle = styled.h3`
   z-index: 1;
-  color: #2D2D2D;
+  color: #ffffff;
   text-align: center;
   font-family: Raleway, sans-serif;
   font-size: calc( (100vw - 360px)/(1920 - 360) * (48 - 26) + 26px);
@@ -50,13 +60,12 @@ const BrandLillteText = styled.p`
   }
 `
 const BrandLogoBlock = styled.div`
-  padding-top: 30px;
-  z-index: 1;
-  width: 80%;
+  padding: 30px;
+  z-index: 2;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  grid-row-gap: 50px;
-  padding-bottom: 60px;
+  grid-row-gap: 30px;
+  grid-column-gap: 10px;
   svg {
     align-self: center;
     justify-self: center;

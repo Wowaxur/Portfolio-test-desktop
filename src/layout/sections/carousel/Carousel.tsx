@@ -41,6 +41,7 @@ const PortfolioSlider = styled.section<PortfolioSectionProps>`
     max-width: 100%;
     height: auto;
     margin-top: 25px;
+    
   }
 
 `

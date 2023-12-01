@@ -11,8 +11,8 @@ function App() {
         <Generalsection>
             <Header/>
             <MainSection/>
-            <GreySector/>
             <BrandsWorksSector/>
+            <GreySector/>
             <Footer/>
         </Generalsection>
     );

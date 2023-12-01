@@ -102,7 +102,8 @@ const PortfolioBlock = styled.div`
   margin-top: 30px;
   background: var(--Gray2, linear-gradient(131deg, #414141 0%, #2D2D2D 100.52%));
   box-shadow: 0 4px 15px 0 rgba(27, 27, 27, 1);
-  max-width: 765px;
+  max-width: 950px;
+  width: 100%;
   min-height: 600px;
   flex-shrink: 0;
   @media (max-width: 768px) {
